@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        document.getElementById("demo").innerHTML = "1" + 2 + "dhruvi";
+        document.getElementById("demo1").innerHTML = "1" + "2" + "dhruvi";
+        document.getElementById("demo2").innerHTML = 5 + 3 + "6" + 3 + 5;//If we put a number in quotes, the rest of the numbers will be treated as strings and concatenate
+        {
+        let x = "100";
+        let y = "10";
+        let z = x * y; 
+        document.write(z+"<br>")//print 1000
+        }
+        {
+        let x = "100";
+        let y = "10";
+        let z = x - y; 
+        document.write(z+"<br>")//print 90
+        }
+        {
+        let x = "100";
+        let y = "10";
+        let z = x /y; 
+        document.write(z+"<br>")//print 10
+        }
+        {
+        let x = "100";
+        let y = "10";
+        let z = x + y; //concate
+        document.write(z+"<br>")//print 10010
+        } 
+        {
+        let x = 100;
+        let y = "abc";
+        let z = x / y; 
+        document.write(z+"<br>")// print  not a number 
+        }
+        {
+        let x = 'abc';
+        let y = "abc";
+        let z = x / y; 
+        document.write(z+"<br>")// print  not a number 
+        }
+        {
+        let x = 'abbc';
+        let y = 100;
+        let z = x / y; 
+        document.write(z+"<br>")// print  not a number 
+        }
+    </script>
+    
+
+
+
+</body>
+
+</html>

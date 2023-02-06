@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<script>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = 10.2;
+        document.write(isNaN('5/2'));
+        document.write("the value of a:" + a + "<br>")
+        {
+            var a = 12;
+            //redaclaration  and reassignment of variable by var is possible
+            document.write("the value of a:" + a + "<br>");
+        }
+        document.write("outside block" + a);//print as 12
+        document.write("<br>");
+
+
+        let b = 14; //for let reclaration is not possible
+        document.write("the value of b is" + b + "<br>");
+        b = 15;
+        document.write("after incrementing b:" + b + "<br>");//reassign is possible with let
+        let d = 1;
+        document.write("the value of d:" + d + "<br>");
+        {
+            d = 2;
+            document.write("the value of d inside the block:" + d + "<br>");//Redeclaring a variable with let, in another block is  allowed
+        }
+
+        const c = 10;
+        //reassign and redclaration is not possible with const
+        document.write("the value of the c is:" + c + "<br>")
+        {
+            const c = 11;
+            document.write("the value of c is" + c + "<br>");//inside the another block redclaration is possible but reassignment of variable which declare using const is not possible
+
+        }
+        document.write("the value of the c outside the block is:" + c);//print 10
+    </script>
+
+</body>
+
+</html>

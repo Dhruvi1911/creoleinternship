@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        {
+            document.write("<b>toString()</b><br>")
+            let x = 123;
+            document.write(x.toString() + "  :toString()<br>");
+            let num = 15;
+            let text = num.toString(8);
+            document.write(text+ " :Convert  15  to a string using base 8:<br>")
+        }
+        {
+            let x = 2.65
+            document.write(x.toExponential() + ": toExponential()<br>");//toExponential() method returns a string, with the number rounded and written using exponential notation
+            document.write(x.toExponential(3) + ": toExponential(3)<br>");//parameter defines the number of digits behind the decimal point// print as 2.650
+            document.write(x.toExponential(6) + ": toExponential(6)<br>");
+
+        }
+        {
+            let x = 10.32324
+            document.write(x.toFixed() + "<br>");//The toFixed() method rounds a number to a given number of digits
+            document.write(x.toFixed(2) + "<br>");
+            document.write(x.toFixed(3) + "<br>");
+        }
+        {
+            let x = 8.3434;
+            document.write(x.toPrecision() + "<br>");//The toPrecision() method returns a string, with a number written with a specified length
+            document.write(x.toPrecision(3) + "<br>");
+            document.write(x.toPrecision(4) + "<br>");
+        }
+        {
+            document.write("<b>valueof()</b><br>")
+            let x = 1.2344
+            document.write(x.valueOf() + "<br>");//The valueOf() method returns a number as a number
+            document.write("123".valueOf() + "<br>");
+            document.write('cdc'.valueOf() + "<br>");
+
+        }
+        {
+            document.write("<b>isInteger </b><br>");
+            letx = 123;
+            document.write(Number.isInteger(123) + ":123 <br>");//return true if there is a number
+            document.write(Number.isInteger("wdd") + ": \"wdd\"<br>");
+            document.write(Number.isInteger("123") + ": \"123\"<br>");
+            document.write(Number.isInteger(4 - 2) + ": 4-2<br>");
+            document.write(Number.isInteger(4 + 2) + ": 4+2<br>");
+            document.write(Number.isInteger(4 * 2) + ": 4*2<br>");
+            document.write(Number.isInteger(4 / 2) + ": 4/2<br>");
+            document.write(Number.isInteger(2 / 4) + ":  2/4 <br>");  
+            document.write(Number.isInteger(0) + ": 0 <br>");
+
+        }
+        {
+            document.write("<b>isSafeInteger </b><br>");
+            document.write(Number.isSafeInteger(10) + " : 10 <br>");
+            document.write(Number.isSafeInteger(123456789) + " : 123456789 <br>");
+            document.write(Number.isSafeInteger('123') + " :'123' <br>");
+            document.write(Number.isSafeInteger(0) + " :0 <br>");
+            document.write(Number.isSafeInteger(0 / 0) + " :0/0 <br>");
+            document.write(Number.isSafeInteger(0.5) + " :0.5 <br>");
+            document.write(Number.isSafeInteger(5 - 2) + " :5-2 <br>");
+            document.write(Number.isSafeInteger(Math.pow(2, 53)) + " :2^53 <br>");
+            document.write(Number.isSafeInteger(Math.pow(2, 53 - 1)) + ":2^53-1 <br>");
+            document.write(Number.isSafeInteger(true) + " :true <br>");
+            document.write(Number.isSafeInteger(false) + " :false <br>");
+            document.write(Number.isSafeInteger(Infinity) + " :Infinity<br>");
+            document.write(Number.isSafeInteger(-Infinity) + " :-Infinity<br>");
+
+        }
+        {
+            document.write("<b>Number.parseFloat() </b><br>");
+            document.write(Number.parseFloat("10") + ": \"10\"<br>");//Number.parseFloat() converts strings to numbers
+            document.write(Number.parseFloat("years 10") + ":\"years 10\"<br>");
+            document.write(Number.parseFloat("10 years") + ":\"10 years\"<br>");
+            document.write(Number.parseFloat("10 20 30") + ":\"10 20 30\"<br>");
+            document.write(Number.parseFloat("10.33") + ":\"10.33\"<br>");
+            document.write(Number.parseFloat(10) + " :10 <br>");
+            document.write(Number.parseFloat('10') + " :'10' <br>");
+            document.write(Number.parseFloat('10 20 30') + " :'10 20 30' <br>");
+            document.write(Number.parseFloat('Hello') + " :'Hello'<br>");
+        }
+        {
+            document.write("<b>parseInt </b><br>");
+            document.write(Number.parseInt("10") + ":'10'<br>");//Number.parseInt() converts strings to whole numbers
+            document.write(Number.parseInt("years 10") + ":'years 10'<br>");
+            document.write(Number.parseInt("10 years") + ":'10 years'<br>");
+            document.write(Number.parseInt("10 20 30") + ":'10 20 30'<br>");
+            document.write(Number.parseInt("10.33") + ":'10.33'<br>");
+            document.write(Number.parseInt("010") + ":'010'<br>");
+        }
+        {
+            document.write("<b>Number.isFinite </b><br>");
+            document.write(Number.isFinite(23) + "<br>");//true
+            // returns true if a number is a finite number.
+            document.write(Number.isFinite("ABC") + ":\"ABC\"(number.isfinite)<br>");//false 
+            document.write(Number.isFinite("105/5/5") + ":\"105/5/5\"<br>");//false
+            document.write(Number.isFinite(0) + ": 0<br>");//true
+            document.write(Number.isFinite(0 / 0) + " : 0/0 <br>");//false
+            document.write(Number.isFinite(Infinity) + " :infinity <br>");//false
+            document.write(Number.isFinite(-Infinity) + " :-infinity <br>");//false
+            document.write(Number.isFinite(NaN) + " :Nan <br>");
+            document.write("<b>isFinite </b><br>");
+            document.write(isFinite("ABC") + ":\"ABC\"<br>");//false
+            document.write(isFinite("123") + " :\"123\"<br>");//true
+            document.write(isFinite(123) + " :123<br>");//true
+            document.write(isFinite("5/2") + " :\"5/2\"<br>");//false    //Doubt 
+            document.write(isFinite(105 / 5 / 5) + " :105 / 5 / 5<br>");//true
+        }
+        {
+            document.write("<b>isNaN </b><br>");
+            document.write(Number.isNaN('2005/12/12') + " :'2005/12/12' <br>");//false
+            document.write(Number.isNaN(2005 / 12 / 12) + " :2005/12/12 <br>");//false
+            document.write(Number.isNaN(NaN) + " :Nan <br>");//true
+            document.write(Number.isNaN('NaN') + " :'NaN' <br>");//false
+            document.write(Number.isNaN(undefined) + " :udefined <br>");//false
+            document.write(isNaN('2005/12/12') + " :'2005/12/12' <br>");//true
+            document.write(isNaN(2005 / 12 / 12) + " :2005/12/12 <br>");//false
+
+        }
+
+        {
+            document.write("<b>Number.Max_VALUE </b><br>");
+            document.write(Number.MAX_VALUE + ": max value <br>")
+        }
+
+        {
+            document.write("<b>Number.Min_VALUE </b><br>");
+            document.write(Number.MIN_VALUE + ": min value <br>")
+        }
+      
+        {
+            document.write("<b>toFixed</b><br>");
+            document.write(2.45666.toFixed(3) + ":   2.45666 <br>");//toFixed() converts a number to a string, rounded to a specified number of decimals
+            document.write(2.4.toFixed(5) + ":  2.4 <br>");
+
+
+        }
+        {
+            document.write("<b>toLocaleString</b><br>");
+            let x=100000
+            document.write(x.toLocaleString()+" :1000000 using localestring ")
+        }
+    </script>
+
+</body>
+
+</html>

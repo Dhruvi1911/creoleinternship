@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const myarr = ['a', 2, 'ab'];
+        const arr1 = [1, 2, 3];
+        const arr2 = [4, 5, 6];
+        document.write(arr1.indexOf(1) + "<br>");
+        document.write(myarr.includes(2) + "<br>");
+        document.write(myarr.includes('ab') + "<br>");
+        document.write(myarr[0] + "<br>");
+        myarr[1] = 3;
+        document.write("updated array is :" + myarr + "<br>");
+        document.write("type of array is: " + typeof myarr + "<br>");
+        const person = { firstName: "John", lastName: "Doe", age: 46 };
+        document.write(person.firstName + "<br>");
+        //adding array element at the end
+        myarr.push('abc');
+        document.write("updated array is(after push) :" + myarr + "<br>");
+        //delete array element from end
+        myarr.pop();
+        document.write("updated array is(after pop) :" + myarr + "<br>");
+        //reverse the array
+        myarr.reverse();
+        document.write("updated array is (after reverse):" + myarr + "<br>");
+        //delete first element
+        myarr.shift();
+        document.write("updated array is (after shift):" + myarr + "<br>");
+        //The unshift() method adds new elements to the beginning of an array.
+        myarr.unshift("0");
+        document.write("updated array is (after unshift):" + myarr + "<br>");
+        const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        //slice function return the selected element as a new array
+        const citrus = fruits.slice(1, 3);
+        document.write("updated array is (after slice):" + citrus + "<br>");
+        fruits.sort();
+        document.write("updated array is (after sort):" + fruits + "<br>");
+        const re = fruits.toString();
+        document.write("after converting to string:" + re + "<br>");
+        const r = fruits.valueOf();//valueof method return array itself
+        document.write("valueof:" + r + "<br>");
+        myarr[6] = 'd';
+        document.write(myarr + "<br>");
+        document.write("to check whether given element is array or not :" + Array.isArray(myarr) + "<br>");
+        document.write("array1: " + arr1 + "<br>");
+        document.write("array2: " + arr2 + "<br>");
+        const result = arr1.concat(arr2);
+        document.write("concated array: " + result + "<br>");
+        document.write("construtor:" + arr1.constructor + "<br>");
+        //The constructor property returns the function that created the Array prototype.
+
+        const ages = [32, 33, 16, 40];
+        document.write("every");
+        document.write("<p id=\"demo\"></p>");
+        document.getElementById("demo").innerHTML = ages.every(checkAge);
+        function checkAge(age) {
+            return age > 18;
+        }
+        document.write("fill method:" + arr1.fill(0) + "<br>");
+
+        document.write("filter");
+        document.write("<p id=\"demo1\"></p>");
+        document.getElementById("demo1").innerHTML = ages.filter(checkAge);
+        //return all element who satisfy the condition
+        function checkAge(age) {
+            return age > 18;
+        }
+        document.write("find");
+        document.write("<p id=\"demo2\"></p>");
+        document.getElementById("demo2").innerHTML = ages.find(checkAge);
+        //only return fiest element who satisfy given condition
+        function checkAge(age) {
+            return age > 18;
+        }
+        document.write("findindex");
+        document.write("<p id=\"demo3\"></p>");
+        document.getElementById("demo3").innerHTML = ages.findIndex(checkAge);
+        function checkAge(age) {
+            return age > 18;
+        }
+        //The some() method checks if any array elements pass a test (provided as a callback function).
+        document.write("some");//return true or false
+        document.write("<p id=\"demo5\"></p>");
+        document.getElementById("demo5").innerHTML = ages.some(checkAge);
+        function checkAge(age) {
+            return age > 18;
+        }
+
+        //The Array.from() method returns an array from any iterable object.
+        document.write("from :<br>");
+        const a = "abcde";
+        // const arr4 = [1,2,3,'ab'];
+        // console.log(arr4.includes('ab'));
+        const arr3 = Array.from(a);
+
+        document.write("array3:" + arr3);
+        document.write("<br>");
+        //The includes() method returns true if an array contains a specified value.
+        document.write("includes<br>");
+        // document.write(myarr.includes(2) + "<br>");
+        //console.log(arr1.includes(3) );//doubt
+        document.write("indexof<br>");
+        // document.write(arr1.indexOf(1) + "<br>");//doubt
+        document.write(myarr.indexOf('ab') + "<br>");
+        document.write(myarr.lastIndexOf('ab') + "<br>");
+
+        //The join() method returns an array as a string.
+        document.write("join method <br>")
+        const b = ['a', 'b', 'c'];
+        document.write("join method:" + b.join() + "<br>");
+        document.write("map()");
+        document.write("<p id=\"demo4\"></p>");
+        document.getElementById("demo4").innerHTML = ages.map(checkAge);
+        function checkAge(age) {
+            return age * 10;
+        }
+
+
+    </script>
+</body>
+
+</html>

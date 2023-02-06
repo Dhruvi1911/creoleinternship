@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>
+        string in js
+    </h1>
+    <script>
+        const a="dhruvi";
+        document.write(a+"<br>");
+        document.write("type of a is " +typeof a +"<br>");
+        const b=new String("patel");
+        document.write(b+"<br>");
+        document.write("type of b is " +typeof b +"<br>");
+        
+        const x="abc";
+        const y=new String("abc");
+
+        document.write(x==y);
+        document.write("<br>");
+        document.write(x===y);
+        document.write("<br>");
+        
+                
+        //to find lenth of the string
+        let c=a.length;
+        document.write("the length of string is :"+c+"<br>");
+
+        let text = "HELLO WORLD! ";
+        let  char =text.charAt(0);
+        document.write(text+"<br>");
+        document.write("char at 0 th index:" +char+"<br>");
+        document.write("char at  last index:" +text.charAt(text.length-1)+"<br>");
+        document.write("code(utf-16) of the char at 1 th place:"+text.charCodeAt(1)+"<br>");//utf-16
+        document.write("code (uni) of the char at 1 th place:"+text.codePointAt(1)+"<br>");//unicode
+        document.write("concat of a and b is "+a.concat(b)+"<br>");
+        document.write("concat of a and b is "+a.concat(" ",b)+"<br>");
+        document.write("constructor of a is "+a.constructor+"<br>");
+        document.write(text.endsWith("WORLD")+"<br>");//check that is the given string is ends with given word or not
+        document.write(text.startsWith("HELLO")+"<br>");
+        document.write("substring from index 1 to 4 : "+text.substr(1,4)+"<br>");
+        document.write("substring  starting from index 2  : "+text.substr(2)+"<br>");
+        document.write("string from the character code : "+String.fromCharCode(72, 69, 76)+"<br>");
+        document.write("to check given word is part of the txt:   "+ text.includes("WORLD")+"<br>");
+        document.write("to check given word index: "+ text.indexOf("WORLD")+"<br>");
+        document.write("to check given letter index: "+ text.indexOf("R")+"<br>");
+        let r="hello hello world";
+        document.write("to check given word last index: "+ r.lastIndexOf("hello")+"<br>");//6
+        document.write("to check given letter last index: "+ r.indexOf("e",5)+"<br>");//8
+        document.write("to MATCH any word in sentence "+ text.match("HELLO")+"<br>");
+        document.write("to repeat the given string "+ text.repeat(3)+"<br>");
+        document.write("to search the given string "+ text.search("WORLD")+"<br>");
+        document.write("to replace the given string "+ text.replace("WORLD","duniya")+"<br>");
+        document.write("to split the given string "+ text.split(" ")+"<br>");
+        document.write("to split the given string "+ text.split("")+"<br>");
+        document.write("to split the given string "+ text.split(" ",1)+"<br>");
+        document.write("to sLICE the given string "+ text.slice("2")+"<br>");
+        document.write("to sLICE the given string between given index is: "+ text.slice("2","5")+"<br>");
+        let text1 = "     Hello World!     ";
+        let text2 = text1.trim();//The trim() method removes whitespace from both sides of a string.
+        document.write("text1 length: "+text1.length+"<br>");
+        document.write("text2 length: "+text2.length+"<br>");
+        document.write("to localecompare between 2 string(a with b):"+'a'.localeCompare('b')+"<br>");
+        document.write("to localecompare between 2 string(b with a):"+'b'.localeCompare('a')+"<br>");
+        document.write("to localecompare between 2 string(a with a):"+'a'.localeCompare('a')+"<br>");
+        document.write("<b>match method</b><br>");
+        let text3 = "The rain in SPAIN stays mainly in the plain";
+        document.write(text3.match("ain")+"<br>");
+        document.write(text3.match(/ain/)+"<br>");
+        document.write(text3.match(/ain/g)+"<br>");
+        document.write(text3.match(/ain/gi)+"<br>");
+        document.write(text3.match(/ia/gi)+"<br>");
+        //The match() method returns an array of matches.
+        //The search() method returns the position of the first match.
+        document.write("<b>search method</b><br>");
+        document.write(text3.search("ain")+"<br>");
+        document.write(text3.search(/ain/)+"<br>");
+        document.write(text3.search(/ain/i)+"<br>");
+        document.write(text3.search(/AIN/)+"<br>");
+        document.write("to check whether the given string start with specified letter:"+text.startsWith("HELLO")+"<br>");
+        document.write("substr:"+ text.substr(1, 4)+"<br>");
+        document.write("substr:"+ text.substring(1, 4)+"<br>");
+        document.write("tolocalelowercase:"+ text.toLocaleLowerCase()+"<br>");
+        document.write("tolocaleUppercase:"+ text.toLocaleUpperCase()+"<br>");
+        document.write("toUppercase:"+ text.toUpperCase()+"<br>");
+        document.write("tolowercase:"+ text.toLowerCase()+"<br>");
+
+        
+
+
+      
+
+
+       
+        
+        
+
+
+        
+         
+
+    </script>
+
+    
+</body>
+</html>
