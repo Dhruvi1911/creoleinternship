@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+</head>
+
+<body>
+    <p>There are different ways to create new objects:</p>
+    <li>
+        Create a single object, using an object literal.
+    </li>
+    <li>
+        Create a single object, with the keyword new
+    </li>
+    <li>
+        Define an object constructor, and then create objects of the constructed type.
+    </li>
+    <li>
+        Create an object using Object.create()
+    </li>
+    <script>
+        document.write("<b>using object literal</b><br>");
+        const person = { firstname: "dhruvi", lastname: "patel", age: 21 };
+        document.write("firstname: " + person.firstname + " lastname: " + person.lastname + " age: " + person.age + "<br>");
+        const person1 = {};
+        person1.firstname = "dev";
+        person1.lastname = "patel";
+        person1.age = "16";
+        document.write("firstname: " + person1.firstname + " lastname: " + person1.lastname + " age: " + person1.age + "<br>");
+        document.write("<b>Create a single object, with the keyword new</b><br>");
+        const person2 = new Object();
+        person2.firstname = "dhruvi";
+        person2.lastname = "patel";
+        person2.age =21;
+        document.write("firstname: " + person2.firstname + " lastname: " + person2.lastname + " age: " + person2.age + "<br>");
+        //JSON.stringify
+        document.write("JSON.stringify<br>");
+        let myString = JSON.stringify(person2);
+        document.write(myString+"<br>")
+        document.write("<b>Define an object constructor, and then create objects of the constructed type.</b><br>");
+        function emp(name, id, salary) {
+            this.name = name;
+            this.id = id;
+            this.salary = salary;
+        }
+        const e = new emp("raj", 01, 100000);
+        document.write(e.name + " " + e.id + " " + e.salary+"<br>");
+        document.write("<b>Create an object using Object.create()</b><br>");
+        const people = {
+           info : function () {
+                return ("My name is "+this.name+" Am I human?" +this.isHuman);
+            }
+        };
+        const me = Object.create(people);
+        me.name = "abc"; // "name" is a property set on "me", but not on "person"  
+        me.isHuman = true; 
+        console.log(me.info());
+
+        // function people1(fname,lname,age) {
+        //     this.firstname=fname;
+        //     this.latname=lname;
+        //     this.age=age;
+        //  }
+        //  const myfather=new people1("pragnesh","patel",45);
+        //  document.write(myfather.firstname)
+
+    </script>
+</body>
+
+</html>

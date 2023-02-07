@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>if condtion/else condition</p>
+    <p id="1"></p>
+    <p>if else if else</p>
+    <p id="2"></p>
+    <p>nested if else</p>
+    <p id="3"></p>
+
+    <p>enter your marks here (between 1 to 100):</p>
+    
+    <input type="number" id="4">
+    <button type="submit" onclick="myfun()">value submit</button>
+    <p id="5"></p>
+    <p>switch statememt</p>
+    <p id="6"></p>
+     <script>
+        //if to specify a block of code to be executed, if a specified condition is true
+        //if to specify a block of code to be executed, if a specified condition is true
+        if (new Date().getHours() <= 18) {
+            document.getElementById("1").innerHTML = " good day!!";
+        }
+        else {
+            document.getElementById("1").innerHTML = "good evening !!";
+        }
+        const time = new Date().getHours();
+        let greeting;
+        //elseif to specify a new condition to test, if the first condition is false
+        if (time < 10) {
+            greeting = "Good morning";
+        } else if (time < 20) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.getElementById("2").innerHTML = greeting;
+
+        function myfun() {
+            let value = Number(document.getElementById("4").value);
+            
+            console.log("value:" + value + " " + typeof value);
+            if (value >= 60) {
+                document.getElementById("5").innerHTML = "gradeA";
+            }
+            else if(value<60 && value>=40)
+            {
+                document.getElementById("5").innerHTML = "gradeB";  
+            }
+            else if(value<40 && value>=20)
+            {
+                document.getElementById("5").innerHTML = "gradeC";  
+            }
+            else{
+                document.getElementById("5").innerHTML = "failed";  
+            }
+        }
+        //switch to specify many alternative blocks of code to be executed
+        let day = new Date().getDay();
+        switch (day) {
+            case 0: day = "sunday";
+                break;
+            case 1: day = "monday";
+                break;
+            case 2: day = "tuesday";
+                break;
+            case 4: day = "wednesday";
+                break;
+            case 5: day = "thursday";
+                break;
+            case 6: day = "friday";
+                break;
+            case 7: day = "saturday";
+                break;
+            default: day = "invalid";
+
+        }
+        document.getElementById("6").innerHTML = "today is:" + day;
+        document.write("ternary operator<br>");
+        //A ternary operator evaluates a condition and executes a block of code based on the condition.
+        let PMarks = 40;
+        let result = (PMarks > 39)?
+        "Pass":"Fail";
+        document.write(result);
+ 
+
+
+
+    </script>
+</body>
+
+</html>

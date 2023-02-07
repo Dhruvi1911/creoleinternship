@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const person = { firstname: "dhruvi", lastname: "patel", age: 21 };
+        const person1 = {};
+        person1.firstname = "dev";
+        person1.lastname = "patel";
+        person1.age = "16";
+        document.write("js object are mutable:<br>");
+        const a = person;
+        a.firstname = "DHRUVI";
+        document.write("firstname: " + person.firstname + " lastname: " + person.lastname + " age: " + person.age + "<br>");
+        document.write("firstname:" + person.firstname + " lastname: " + person.lastname + " age: " + person.age + "<br>");
+        //getters 
+        document.write("getters<br>");
+        const person4 = {
+            firstname: "abc", lastname: "ss", age: 21,
+            get value() { return this.age; }
+        };
+        document.write("by using getter:" + person4.valu+ "<br>");
+        //setters 
+        document.write("getters<br>");
+        const person5 = {
+            firstname: "abc", lastname: "ss", age: "",
+            set vl(vl) {
+                this.age = vl;
+            }
+        };
+        person5.vl = 16;
+
+        document.write("by using setter:" + person5.age + "<br>");
+
+        //for in loop
+        for (let x in person) {
+            document.write(x + ": " + person[x] + " ");//keyvalue 
+        }
+        document.write("<br>");
+        //we can also delete the object propety and method
+        delete person1.firstname;
+        const myArray = Object.values(person1);
+        document.write(myArray + "<br>");
+        //nested array and object
+        const myobj = {
+            name: "John",
+            age: 30,
+            cars: [
+                { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+                { name: "BMW", models: ["320", "X3", "X5"] },
+                { name: "Fiat", models: ["500", "Panda"] }
+            ]
+        }
+        for (let i in myobj.cars) {
+            document.write("<h5>" + i + ":" + myobj.cars[i].name + "<h5><br>");
+            for (j in myobj.cars[i].models) {
+                document.write("<li>" + i + " " + j + " " + myobj.cars[i].models[j] + "</li>");
+            }
+        }
+        const person3 = {
+            firstName: "dev",
+            lastName: "patel",
+            name: function () {
+                return (this.firstName + " " + this.lastName).toUpperCase();
+            }
+        };
+        document.write(person3.name());
+        document.write("built-in  constructor<br>");
+        //The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+        const x1 = new String();   // A new String object
+        const x2 = new Number();   // A new Number object
+        const x3 = new Boolean();  // A new Boolean object
+        const x4 = new Object();   // A new Object object
+        const x5 = new Array();    // A new Array object
+        const x6 = new RegExp();   // A new RegExp object
+        const x7 = new Function(); // A new Function object
+        const x8 = new Date();     // A new Date object
+        // Display the type of all objects
+        document.write("x1: " + typeof x1 + "<br>");
+        document.write("x2: " + typeof x2 + "<br>");
+        document.write("x3: " + typeof x3 + "<br>");
+        document.write("x4: " + typeof x4 + "<br>");
+        document.write("x5: " + typeof x5 + "<br>");
+        document.write("x6: " + typeof x6 + "<br>");
+        document.write("x7: " + typeof x7 + "<br>");
+        document.write("x8: " + typeof x8 + "<br>");
+        document.write("objects methods<br><br>");
+
+        document.write("object.assign<br>");
+        document.write("The Object.assign() static method copies all enumerable own properties from one or more source objects to a target object. It returns the modified target object.<br>");
+        const object1 = {
+            a: 1,
+            b: 2,
+            c: 3
+        };
+        const object3 = {
+            g: 1,
+            h: 2,
+            i: 3
+        };
+
+        const object2 = Object.assign({ c: 4, d: 5 }, object1);
+        const object4 = Object.assign({ g: 34, h: 25 }, object3);
+        document.write(object2.c, object2.d);
+        document.write(object4.g, object4.h);
+        document.write("<br>");
+
+        document.write("object.defineproperty<br>");
+        document.write("The Object.defineProperty() method defines a new property directly on an object and returns the object. <br>");
+        const object5 = {
+            property1:100
+        };
+        Object.defineProperty(object5, 'property1', {
+            value: 42,
+            value:34
+        });
+        
+        document.write(object5.property1);
+        console.log(object5);
+        document.write("<br>");
+
+
+        document.write("object.entries()<br>");
+        document.write("JavaScript Object.entries() method is used to return an array of a given object's own enumerable property [key, value] pairs. <br>");
+        const object6 = { fname: 'dhruvi', lname: 'patel' };
+        document.write(Object.entries(object6));
+        console.log(typeof Object.entries(object6));
+        console.log(Object.entries(object6));          
+        document.write("<br>");
+
+        document.write("object.freez()<br>");
+        document.write("The Object.freeze() method freezes an object that prevents new properties from being added to it. This method prevents the modification of existing property, attributes, and values. <br>");
+        const object7 = { fname: 'dhruvi', lname: 'patel' };
+        const ob = Object.freeze(object7);
+        ob.fname = "DHRUVI";
+        document.write(ob.fname);
+        document.write("<br>");
+
+
+        document.write("getOwnPropertyDescriptor<br>");
+        document.write("The Object.getOwnPropertyDescriptor method allows to query the full information about a property and returns a property descriptor for an own property of an given object <br>");
+        const object8 = { fname: 'dhruvi', lname: 'patel' };
+        const ab = Object.getOwnPropertyDescriptor(object8, 'lname');
+        console.log(ab.value);
+        console.log(ab.enumerable);
+        console.log(ab.writable);//writable true if and only if the value associated with the property may be changed 
+        console.log(ab.configurable);
+
+
+        document.write("<br>");
+        document.write("getOwnPropertyDescriptors<br>");
+        document.write("The Object.getOwnPropertyDescriptors() static method returns all own property descriptors of a given object. <br>");
+        const object9 = {
+            property1: 42,
+            property2: 56
+        };
+        const descriptors1 = Object.getOwnPropertyDescriptors(object9);
+        console.log(descriptors1.property2.writable);
+        console.log(descriptors1.property1.writable);
+        console.log(descriptors1.property2.value);
+        console.log(descriptors1.property1.value);
+        document.write("<br>");
+
+        document.write("getOwnPropertynames<br>");
+        document.write("The Object.getOwnPropertyNames() method returns an array of all properties (except those non-enumerable properties which use symbol) found directly upon a given object.<br>");
+        const object10 = {
+            a: 1, b: 2
+        }
+        const abc = Object.getOwnPropertyNames(object10);
+        console.log(abc);
+        document.write(abc);
+
+        document.write("<br>");
+
+        document.write("getOwnPropertySymbols<br>");
+        document.write("The Object.getOwnPropertySymbols() static method returns an array of all symbol properties found directly upon a given object.<br>");
+
+        const object11 = {};
+        const aa = Symbol('aa');
+        const bb = Symbol('bb');
+        //in this we have to add property for the symbol
+        object11[aa] = 'fname';
+        object11[bb] = 'lname';
+        const abcd = Object.getOwnPropertySymbols(object11);
+        console.log(abcd.length);
+        document.write(abcd.length);
+        document.write("<br>");
+
+        document.write("getPrototypeOf<br>");
+        document.write("The Object.getPrototypeOf() method of JavaScript returns the prototype (i.e. the value of the internal [[Prototype] property) of the specified object.");
+        object12 = {};
+        const object13 = Object.create(object12);
+        const abcde = Object.getPrototypeOf(object13);
+        console.log(abcde === object12);
+        document.write("<br>");
+
+
+        document.write("Object.is<br>");
+        document.write("The Object.is() static method determines whether two values are the same value.<br>");
+        const object14 = { a: 1 };
+        const object15 = { a: 1 };
+        console.log(object14 == object15);//false
+        console.log(object14 === object15);//false
+        console.log(Object.is(object14, object15));//false
+        document.write("<br>");
+
+        document.write("Object.preventExtensions<br>");
+        document.write("The Object.preventExtensions() only prevents the addition of new properties from ever being added to an object<br>");
+        const object16 = {};
+        Object.preventExtensions(object16);
+        object16.a = 3;
+        console.log(object16.hasOwnProperty("a"));
+        document.write("<br>");
+
+        document.write("Object.seal() ");
+        document.write("The Object.seal() method of JavaScript seals an object which prevents new properties from being added to it and marks all existing properties as non-configurable. The object to be sealed is passed as an argument, and the method returns the object which has been sealed.<br>")
+        const object17 = { property1: 1 };
+        const object18 = Object.seal(object17);
+        object18.property1 = 2;
+        object18.property2 = 3;
+        //in seal we can change property but cannot add or remove
+        console.log(object18.property1);
+        console.log(object18.property2);
+        delete object18.property1;
+        console.log("after deleting it still pressent", object18.property1);
+        
+        document.write("Object.setPrototypeof<br>");
+        document.write("The Object.setPrototypeOf() method sets the prototype  of a specified object to another object or null<br>")
+        const object19 = {
+            prop1() {
+                return 'hello';
+            },
+            prop2() {
+                return 'JavaScript ';
+            }
+        }
+        const object20 = {
+            prop3() {
+                return 'hii';
+            }
+        }
+        Object.setPrototypeOf(object20, object19); 
+        console.log(object20.prop3());
+        console.log(object20.prop2());
+        console.log(object20.prop1());
+</script>
+</body>
+
+</html>

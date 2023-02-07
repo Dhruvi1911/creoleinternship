@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+
+<body>
+    <script>
+
+        class human {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            sing() {
+                return this.name + " can sing";
+            }
+        }
+        let person = new human("dhruvi", 21);
+        console.log(person);
+        console.log(person.name);
+        console.log(person.age);
+        console.log(person.sing());
+        //Inheritance: It is a concept in which some properties and methods of an Object are being used by another Object.
+        class animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+
+            }
+            sing() {
+                return this.name + " can sing";
+            }
+        }
+        class cats extends animal {
+            constructor(name, age, colour) {
+                // super keyword for calling the above class constructor
+                super(name, age);
+                this.colour = colour;
+            }
+            k() {
+                return "cat has " + this.colour + " colour";
+            }
+
+        }
+        let c = new cats("maria", 5, 'white');
+        console.log(c);
+        console.log(c.sing());
+        console.log(c.k());
+        //Encapsulation: The process of wrapping properties and functions within a single unit is known as encapsulation. 
+        class person1 {
+            constructor(name, id) {
+                this.name = name;
+                this.id = id;
+            }
+            add_Address(add) {
+                this.add = add;
+            }
+            getDetails() {
+                console.log("name is : " + this.name + " address is: " + this.add)
+
+            }
+        }
+
+        let person2 = new person1('rohit', 21);
+        person2.add_Address('Delhi');
+        person2.getDetails();
+       // data Abstraction which means representing essential features hiding the background detail.
+        function person4(fname, lname) {
+            let firstname = fname;
+            let lastname = lname;
+
+             getDetails_noacces=function(){
+            return "firstname is: " + firstname + " lastname is: " + lastname;
+        }
+
+        this.getDetails_access = function () {
+            return "firstname is: " + firstname + " lastname is: " + lastname;
+        }
+    }
+        
+        let person3 = new person4('raj', 'shah');
+        console.log(person3.firstname);
+        console.log(person3.getDetails_noacces);
+        console.log(person3.getDetails_access());
+
+        //Polymorphism means the same function with different parameter is called many times.
+        class A {
+            area(x, y) {
+                console.log(x * y);
+            }
+        }
+        class B extends A {
+            area(a, b) {
+                super.area(a, b);
+                console.log('Class B')
+            }
+        }
+        let ob = new B();
+        let output = ob.area(100, 200);
+
+
+        const person7 = {
+            firstName: "dev",
+            lastName: "patel",
+            name: function () {
+                return (this.firstName + " " + this.lastName).toUpperCase();
+            }
+        };
+        document.write(person7.name());
+
+    </script>
+
+
+</body>
+
+</html>

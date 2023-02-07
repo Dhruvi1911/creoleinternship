@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JavaScript has a built in function JSON.parse() for converting JSON strings into JavaScript objects
+        let text = ' {"employees":[' +
+            '{"fname":"dhruvi","lname":"patel"},' +
+            '{"fname":"dev","lname":"patel"}]}';
+        const obj = JSON.parse(text);
+        console.log(obj);
+        console.log(typeof obj);
+        console.log(obj.employees[0].fname);
+        console.log(obj.employees[0].lname);
+        let text1 = '{"name":"a","age":1}';
+        const obj1 = JSON.parse(text1);
+        console.log(obj1, typeof obj1);
+        let text2 = '["a","b","c"]';
+        const obj2 = JSON.parse(text2);
+        console.log(obj2, typeof obj2);
+
+
+        //JavaScript also has a built in function JSON.stingify() for converting an object into a JSON string
+        const person = new Object();
+        person.firstname = "dhruvi";
+        person.lastname = "patel";
+        person.age = 21;
+        let myString = JSON.stringify(person);
+        console.log(myString);
+        console.log(typeof myString);
+        const person1 = { name: 'b', age: 20 };
+        let t = JSON.stringify(person1);
+        console.log(t, typeof t);
+
+
+    </script>
+</body>
+
+</html>

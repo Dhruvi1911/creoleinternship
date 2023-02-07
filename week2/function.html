@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function</title>
+</head>
+
+<body>
+    <button id="1" onclick="myfun()">tap to call myfun</button><br>
+    enter two number to sum:
+    <input type="number" id="2">&nbsp;<input type="number" id="3">
+    <button type="submit" onclick="sum()">add</button><br>
+    <p id="4"></p>
+    to multipy the given number<br>
+    <button type="submit" onclick="document.write('given number multiplication is:'+mul(3,4))">multiply</button>
+    <p id="3">
+
+    </p>
+    <script>
+
+        function myfun() {
+            document.write("hello world");
+
+        }
+        function sum() {
+            let a = Number(document.getElementById("2").value);
+
+            console.log(a, typeof a);
+            let b = Number(document.getElementById("3").value);;
+
+            console.log(b, typeof b);
+            document.getElementById("4").innerHTML = "sum of two number are:" + (a + b);
+        }
+        function mul(a, b) {
+            //document.write("given two number multiplcation is:"+a*b);
+            return a * b;
+        }
+
+        document.write("callback function<br>")
+
+        function add(a, b, callback) {
+            callback();
+            document.write("sum of " +a +" and " +b+" is :"+ a+b+"<br>");
+            //    callback();
+        }
+
+        // add() function is called with arguments given below
+        add(5, 6, function disp() {
+            document.write('callback<br>');
+        });
+
+    </script>
+
+</body>
+
+</html>
