@@ -46,7 +46,106 @@
         //getTime() returns the number of milliseconds since January 1, 1970 00:00:00.
         let text9=d.getTime();
         console.log("milisecond from 1/1/1970 to today:",text9);
-        
+        //getTimezoneOffset() returns the time difference between UTC time and local time, in minutes
+        let text10=d.getTimezoneOffset();
+        console.log("the time difference between UTC time and local time, in minutes: ",text10);
+        //getUTCDate() returns the day of the month (1 to 31) of a date object according to the UTC.
+        let text11=d.getUTCDate();
+        console.log(" the day of the month (1 to 31) of a date object according to the UTC: ",text11);
+        //getUTCDay() returns the day of the week (0 to 6) of a dateaccording to the UTC
+        let text12=d.getUTCDay();
+        //const weekday1 = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        console.log("the day of the week (0 to 6) of a dateaccording to the UTC: ",weekday[text12]);
+        //getUTCFullYear() returns the year of a date according to the UTC
+        let text13=d.getUTCFullYear();
+        console.log("the year of a date according to the UTC: ",text13);
+        //getUTCHours() returns the hour (0 to 23) of a date according to the UTC
+        let text14=d.getUTCHours();
+        console.log(" the hour (0 to 23) of a date according to the UTC:",text14);
+        //getUTCMilliseconds() returns the milliseconds (0 to 999) of a date.
+        let text15=d.getUTCMilliseconds();
+        console.log("the milliseconds (0 to 999) of a date",text15);
+        //getUTCMinutes() returns the minutes (0 to 59) of a date.
+        let text16=d.getUTCMinutes();
+        console.log("the minutes (0 to 59) of a date.",text16);
+        //getUTCMonth() returns the month (0 to 11) of a date.
+        let text17=d.getUTCMonth();
+        console.log("the month (0 to 11) of a date:",text17);
+        //getUTCSeconds() returns the seconds (0 to 59) of a date.
+        let text18=d.getUTCSeconds();
+        console.log("the seconds (0 to 59) of a date:",text18);
+        //Date.now() returns the number of milliseconds since January 1, 1970.
+        let text19=Date.now();
+        console.log("number of milliseconds since January 1, 1970",text19);
+        //parse() parses a date string and returns the number of milliseconds since midnight January 1, 1970:
+        console.log("the number of milliseconds since midnight January 1, 1970:",Date.parse("7 february,2023"));
+        //setDate() sets the day of the month of a date.
+        d.setDate(10);
+        console.log("after set the date :",d);
+        d.setDate(0);
+        console.log("after set the date :",d);// if 0 is written then return date of previous month
+        //setFullYear() sets the year of a date.
+        d.setFullYear(2020);
+        console.log("after set the year:"+d);
+        //setHours() sets the hour of a date.
+        d.getHours(1);
+        console.log("after set the hours:",d);
+        //setMilliseconds() sets the milliseconds of a date.
+        d.setMilliseconds(1000);
+        console.log("after setting the milisecond"+d);
+        //setMinutes() sets the minutes of a date.
+        d.setMinutes(12);
+        console.log("after setting the minutes:"+d);
+        //The setMonth() method sets the month of a date object.
+        d.setMonth(2);
+        console.log("after setting month is:"+ d);
+        //toDateString() method returns the date (not the time) of a date object as a string.
+        let a=new Date();
+        let text20=a.toDateString();
+        console.log("toDateString():"+text20);
+        // toISOString() method returns a date object as a string, using the ISO standard
+        let b=new Date();
+        let text21=b.toISOString();
+        console.log("toISOString():"+text21);
+        //toJSON() returns a date as a string, using JSON date formatting
+        let c=new Date();
+        let text22=c.toJSON();
+        console.log("toJSON():"+text22);
+        console.log(typeof text22);
+        //toLocaleDateString() method returns the date (not the time) of a date object as a string, using locale conventions.
+        let e=new Date();
+        let text23=e.toLocaleDateString();
+        console.log("toLocaleDateString()"+text23);
+        console.log(typeof text23);
+        //>toLocaleTimeString() returns the time portion of a date, as a string, using locale conventions
+        let f=new Date();
+        let text24=f.toLocaleTimeString();
+        console.log("toLocaleTimeString():"+text24);
+         console.log(typeof text24);
+         //>toLocaleTimeString() returns the time portion of a date, as a string, using locale conventions
+
+         let g=new Date();
+         let text25=g.toLocaleString();
+         console.log("toLocaleString():"+text25);
+         console.log(typeof text25);
+         //The toString() method returns a date object as a string.
+
+         let h=new Date();
+         let text26=h.toString();
+         console.log("toString():"+text26);
+         console.log(typeof text26);
+         //toTimeString() method returns the time portion of a date object as a string
+         let i=new Date();
+         let text27=i.toTimeString();
+         console.log("toTimeString():"+text27);
+         console.log(typeof text27);
+         //The valueOf() method returns the primitive value of a date object.
+         //The primitive value is returned as the number of millisecond since midnight January 1, 1970 UTC.
+         let j=new Date();
+         let text28=j.valueOf();
+         console.log("value of():"+text28);
+         console.log(typeof text28);
+
         // function addZero(x, n) {
         //     while (x.toString().length < n) {
         //         x = "0" + x;

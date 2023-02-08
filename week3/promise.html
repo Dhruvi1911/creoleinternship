@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+
+<body>
+    <script>
+        var promise = new Promise(function (resolve, reject) {
+            const x = "dhruvi";
+            const y = "dhruvi";
+            if (x == y) {
+                resolve();
+            }
+            else {
+                reject()
+            }
+        });
+        //then() method takes two functions as parameters.  First function is executed if promise is resolved and a result is received. Second function is executed if promise is rejected and an error is received. 
+        promise.
+            then(function () {
+                console.log("success");
+            }, function () {
+                console.log("ërror");
+            }
+            )
+
+        var mypromise = new Promise(function (myresolve, myreject) {
+            setTimeout(function () {
+                myresolve("hello");
+            }, 5000);
+        });
+        mypromise.
+            then(function (value) {
+                console.log(value);
+            },
+                function (value) {
+                    console.log(value);
+                })
+        //catch() is invoked when a promise is either rejected or some error has occurred in execution.
+        var mepromise = new Promise(function (myresolve, myreject) {
+            setTimeout(function () {
+                myreject("error ocuur");
+            }, 2000);
+        });
+        mepromise.
+            then(function (value) {
+                console.log(value);
+            })
+            .catch(function (value) {
+                console.log(value);
+            });
+    </script>
+
+</body>
+
+</html>

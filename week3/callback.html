@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+
+<body>
+    <input type="number" id="1" placeholder="enter first number"><br> 
+    <input type="number" id="2" placeholder="enter second number"><br>
+    <button type="submit" onclick="myfun()//add(x,y,display)">click here to add number</button>
+    <script>
+        //  const x=Number(document.getElementById("1").value);
+        //   console.log(x,typeof x);
+        //   const y=Number(document.getElementById("2").value);
+        //   console.log(y,typeof y);
+        //   function display(result)
+        //   {
+        //     console.log("addition is:",result);
+        //   } 
+        //   function add(a,b,callback) 
+        //   {
+        //     let result=a+b;
+        //     callback(result);
+        //   }
+         
+        function myfun() {
+            const x = Number(document.getElementById("1").value);
+            console.log(x, typeof x);
+            const y = Number(document.getElementById("2").value);
+            console.log(y, typeof y);
+            add(x, y, display);              //display is callback function
+            function display(result) {
+                console.log("addition is:", result);
+            }
+            function add(a, b, callback) {
+                let result = a + b;
+                callback(result);
+            }
+        }
+       
+      //add(x,y,display);
+    </script>
+</body>
+
+</html>

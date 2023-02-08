@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async </title>
+</head>
+<body>
+    <script>
+        //async makes a function return a Promise
+        //if some error occur
+        async function myfunc()
+        {
+            promise.reject("error") ;
+        }
+        myfunc().then(
+            function(){
+                console.log("hello world");
+            },
+            function()
+            {
+                console.log("error occured");
+            }
+        );
+        //if there is no error
+        async function myfun2()
+        {
+            return "hello";
+
+        }
+        myfun2().then(
+            function()
+            {
+                console.log("resolved");
+            },
+            function()
+            {
+                console.log("error generated");
+            }
+        );
+    </script>
+</body>
+</html>
