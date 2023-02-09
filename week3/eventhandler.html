@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventhandler</title>
+</head>
+<body onload= "window.alert('page succesfully load')">
+    <p>onmouseover</p>
+    <p onmouseover="myfun()">keep cursor over me</p><br>
+    <p>onfocus</p><br>
+    <input type="text" id="1" onfocus="myfun2()"><br>
+    <p>onkeydown</p><br>
+    <input type="text" id="2" onkeydown="myfun3()"><br>
+    
+    <script>
+       
+           function myfun()
+           {
+            alert("this is because cursor of the event come over the element");
+           }
+          function myfun2()
+          {
+               document.getElementById("1").style.background="pink";
+               
+          }
+          function myfun3()
+          {
+               document.getElementById("2");
+               alert("onkeydown effect");
+          }
+           
+    </script>
+</body>
+</html>

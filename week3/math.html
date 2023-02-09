@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+
+<body>
+    <script>
+        //The Math object is static.
+        //All methods and properties can be used without creating a Math object first.
+        console.log("Math property");
+        console.log("PI value :" + Math.PI);
+        //returns Euler's number
+        console.log("euler'snumber:" + Math.E);
+        //returns the square root of 2
+        console.log("the square root of 2:" + Math.SQRT2);
+        //returns the square root of 1/2
+        console.log("the square root of 1/2:" + Math.SQRT1_2);
+        //returns the natural logarithm of 2
+        console.log("the natural logarithm of 2:" + Math.LN2);
+        //returns the natural logarithm of 10
+        console.log("the natural logarithm of 10:" + Math.LN10);
+        // returns base 2 logarithm of E
+        console.log("the  base 2 logarithm of E:" + Math.LOG2E);
+        // returns base 10 logarithm of E
+        console.log("the  base 10 logarithm of E:" + Math.LOG10E);
+        console.log("Math method");
+        //Returns x rounded to its nearest integer
+        console.log(" 4.5 rounded to its nearest integer:" + Math.round(4.5));
+        console.log(" 4.3 rounded to its nearest integer:" + Math.round(4.3));
+        console.log(" 4.6 rounded to its nearest integer:" + Math.round(4.6));
+        //Math.ceil(x) returns the value of x rounded up to its nearest integer
+        console.log("-4.5 rounded to its nearest integer:" + Math.ceil(-4.5));
+        console.log(" 0.9 rounded to its nearest integer:" + Math.ceil(0.9));
+        console.log(" 4.2 rounded to its nearest integer:" + Math.ceil(4.2));
+        //Math.floor(x) returns the value of x rounded down to its nearest integer
+        console.log("-4.5 rounded to its nearest integer:" + Math.floor(-4.5));
+        console.log(" 0.9 rounded to its nearest integer:" + Math.floor(0.9));
+        console.log(" 4.2 rounded to its nearest integer:" + Math.floor(4.2));
+        //Math.trunc(x) returns the integer part of x
+        console.log("integer part of -4.5: " + Math.trunc(-4.5));
+        console.log("integer part of 0.9: " + Math.trunc(0.9));
+        console.log("integer part of 1.2: " + Math.trunc(1.2));
+        //Math.sign(x) returns if x is negative, null or positive
+        console.log("-4.5 is:" + Math.sign(-4.5));
+        console.log(" 0 is:" + Math.sign(0));
+        console.log("4.5 is:" + Math.sign(4.5));
+        //Math.pow(x, y) returns the value of x to the power of y
+        console.log("2 to the power3 is: " + Math.pow(2, 3));
+        //Math.sqrt(x) returns the square root of x
+        console.log("squareroot of 100 is:" + Math.sqrt(100));
+        //Math.abs(x) returns the absolute (positive) value of x
+        console.log("positive value of the -4.3 is:" + Math.abs(-4.3));
+        //Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians)
+        console.log("sin value of  45(radian)  number is:", Math.sin(45 * Math.PI / 180));
+        //Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians)
+        console.log("cos value of 90(radian) is:" + Math.cos(0 * Math.PI / 180));
+        //Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments:
+        console.log(Math.min(0, 10, 3, 6, -2));
+        console.log(Math.max(0, 10, 3, 6, -2));
+        //Math.random() returns a random number between 0 and 1:
+        console.log("random numbe rbetween 0 to 1 is:" + Math.random());
+        //Math.log2(x) returns the base 2 logarithm of x.
+        console.log(" base 2 logarithm of 10:"+Math.log2(10));
+        //Math.log10(x) returns the base 10 logarithm of x
+        console.log("base 10 logarithm of 10:"+Math.log10(10));
+        //The Math.acos() method returns the arccosine (in radians) of a number.
+        // The Math.acos() method returns a value value between 0 and PI.
+        // The Math.acos() method expects a parameter in the range -1 to 1.
+        console.log("Math.acos(-1):"+Math.acos(-1));
+        // cosh x = (e^x + e^−x) / 2, where h represents hyperbolic,
+        //The Math.acosh() method returns the hyperbolic arc-cosine of a number.
+        console.log("math.acosh(-1): "+Math.acosh(-1));//for negative valueits return NAN
+        console.log("math.acosh(1): "+Math.acosh(1));
+        console.log("math.acosh(2): "+Math.acosh(2));
+        //The Math.asin() method returns the arcsine (in radians) of a number.
+        console.log("Math.asin(1): "+Math.asin(1));
+        console.log("Math.asin(-1): "+Math.asin(-1));
+        console.log("Math.asin(0): "+Math.asin(0));
+        //Math.asinh() returns the hyperbolic arc-sine of a number
+        console.log("Math.asinh(0): "+Math.asinh(0));
+        console.log("Math.asinh(1): "+Math.asinh(1));
+        console.log("Math.asinh(2): "+Math.asinh(2));
+        //The Math.cbrt() method returns the cubic root of a number.
+        console.log("cubic root of the 8 is:"+Math.cbrt(8));
+        //Math.clz32() (short for CountLeadingZeroes32) returns the number of leading zeros in a 32-bit binary representation of a number
+        console.log("leading 0s in 1 in 32 bit"+Math.clz32(0));
+        console.log("leading 1s in 1 in 32 bit"+Math.clz32(1));
+        console.log("leading 2s in 1 in 32 bit"+Math.clz32(2));
+
+
+
+
+    </script>
+</body>
+
+</html>
