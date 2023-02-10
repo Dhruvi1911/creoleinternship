@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //variable declare with var can have global scope
+        var a = 10;
+        function f() {
+            var a = 2;  //this is only function scope
+            console.log(a);//2
+        }
+        f();
+        console.log(a);//10
+        var b = 3;
+        {
+            var b = 9;
+            console.log(b);
+        }
+        console.log(b);//
+        //variable declare with let have block scope
+        let c = 3;
+        {
+            let c = 9;
+            console.log(c);
+        }
+        console.log(c);
+        //variable declare using constant can not be reassigned
+        const d = 2;
+        console.log(b)
+        {
+            const d = 4;
+            console.log(d);
+        }
+        console.log(d);
+        console.log("variable scoping");
+        var h = 10;
+        console.log(h);//10
+
+        function test() {
+            var h = 20;
+            console.log(h);//20
+
+            if (h > 10) {
+                let h = 30;
+                console.log(h);//30
+            }
+
+            console.log(h);//20
+        }
+
+        test();
+        console.log(h);//10
+
+
+        console.log("variable hoisting");
+        //Hoisting is JavaScript's default behavior of moving declarations to the top.
+        x = 1;
+        console.log(x);
+        var x;
+        // y = 2;
+        // console.log(y);
+        // let y; //give ReferenceError: Cannot access 'y' before initialization
+        // z=3;
+        // console.log(z);
+        // const z;//Uncaught SyntaxError: Missing initializer in const declaration
+        var i = 10;
+        function test() {  //here i is not defined  
+            if (i > 20) {
+                var i = 50;
+            }
+            console.log(i);
+        }
+        console.log(i);//here i is global so it can be accessed
+        test();//but in this function it is not passed value so it can not accessed value
+
+
+    </script>
+</body>
+
+</html>

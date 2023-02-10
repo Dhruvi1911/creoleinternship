@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+
+<body>
+    <script>
+        console.log("Arrow Function with No Argument");
+        let x = () => {
+            console.log("with no parameter");
+        }
+        x();
+        console.log("Arrow Function with one Argument");
+        let y = (value) => {
+            console.log(value);
+        }
+        y("hello");
+        console.log("Arrow function with two parameter");
+        let add = (a, b) => console.log(a + b);
+        add(4, 5);
+
+        function Person() {
+            this.name = "dhruvi";
+            this.age = 21;
+            this.sayname = function () {
+                console.log(this.age);//21
+                function a() {
+                    console.log(this.age);//undefined because this refer to the global (window)object.
+                    console.log(this);
+                }
+                a();
+            }
+        }
+        let j = new Person();
+        j.sayname();
+        function Person1() {
+            this.name = 'Jack',
+                this.age = 25,
+                this.sayName = function () {
+
+                    console.log(this.age);//25
+                    let innerFunc = () => {
+                        console.log(this.age);//25  this is refer to the parent object
+                    }
+
+                    innerFunc();
+                }
+        }
+
+        const h = new Person1();
+        h.sayName();
+       
+        //class
+        let person = {
+            name: 'Jack',
+            age: 25,
+            sayName: () => {
+            console.log(this.age); // //this refers to the global
+            }
+        }
+        person.sayName();
+
+
+
+    </script>
+</body>
+
+</html>

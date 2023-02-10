@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regex</title>
+</head>
+
+<body>
+    <!-- <p>
+         Hello My Name Is Dhruvi
+    </p>
+    <button type="submit" onclick="check()">ckick</button> -->
+    <script>
+        console.log("Regular Expression Search Methods");
+        console.log("text.match(pattern):");
+        let a = "hello hii hello Hello world";
+        let regex = /hello/;
+        let result = a.match(regex);
+        console.log(result);
+        let regex1 = /hello/gi;
+        let result1 = a.match(regex1);
+        console.log(result1);
+        //search() searches a string for a value and returns the position of first the match
+        console.log("text.search(pattern)");
+        let regex2 = /hello/;
+        let result2 = a.search(regex2);
+        console.log(result2);
+        let regex3 = /hello/gi;
+        let result3 = a.search(regex3);
+        console.log(result3);
+        console.log("pattern.exec(text)");
+        //The exec() method tests for a match in a string.If it finds a match, it returns a result array, otherwise it returns null.
+        let pattern = /O/i;
+        let result4 = pattern.exec(a);
+        console.log(result4);
+        console.log("pattern.test(text)");
+        //The test() method tests for a match in a string .If it finds a match, it returns true, otherwise it returns false.
+        let pattern1 = /E/i;
+        let result5 = pattern.test(a);
+        console.log(result5);
+        let text = "Do you know if this Is all there is?";
+        // \b is used to check any word is start with the given character
+        let pattern2 = /\bis/g;
+        let result6 = text.match(pattern2);
+        console.log(result6);
+        let text1 = "THIS This this";
+        let result7 = text1.match(/[THIS]/g);
+        console.log(result7);
+        let result8 = text1.match(/[THIS]/gi)
+        console.log(result8);
+        var inStr = "abc123xyz456_7_00";
+        console.log(inStr.match(/[0-9]+/));
+        const regex4 = /(\d{3})(\d{3})-(\d{4})/g;
+        const result9 =regex4.test('My phone number is: 555-123-4567.');
+        console.log(result9);
+
+    </script>
+</body>
+
+</html>
