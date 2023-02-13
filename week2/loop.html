@@ -10,7 +10,7 @@
 
 <body>
     <script>
-        // document.write("javascript loops<br>");
+         document.write("javascript loops<br>");
         document.write("javascript for loop<br>");
         //for - loops through a block of code a number of times
         for (let i = 1; i <= 5; i++) {
@@ -57,12 +57,21 @@
        //The forEach() method calls a function for each element in an array.
        
         const ab=[1,2,3,4,5];
-        let sum=0;
+        
         ab.forEach(myfunction);
         function myfunction(value,index){
             console.log("index is:"+index+"value is:"+value);
         
         }
+        const x=[1,2,3,4,5];
+        let sum=0;
+       
+        let myfun=(value)=>
+        {
+            sum=sum+value;
+        }
+        x.forEach(myfun);
+        console.log("sum of the elements of the array is:",sum);
         // function Car(model) {
         //     this.model = model;
         //     gear = 1;

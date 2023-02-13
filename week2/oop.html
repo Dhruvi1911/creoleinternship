@@ -69,20 +69,20 @@
         let person2 = new person1('rohit', 21);
         person2.add_Address('Delhi');
         person2.getDetails();
-       // data Abstraction which means representing essential features hiding the background detail.
+        // data Abstraction which means representing essential features hiding the background detail.
         function person4(fname, lname) {
             let firstname = fname;
             let lastname = lname;
 
-             getDetails_noacces=function(){
-            return "firstname is: " + firstname + " lastname is: " + lastname;
+            getDetails_noacces = function () {
+                return "firstname is: " + firstname + " lastname is: " + lastname;
+            }
+
+            this.getDetails_access = function () {
+                return "firstname is: " + firstname + " lastname is: " + lastname;
+            }
         }
 
-        this.getDetails_access = function () {
-            return "firstname is: " + firstname + " lastname is: " + lastname;
-        }
-    }
-        
         let person3 = new person4('raj', 'shah');
         console.log(person3.firstname);
         console.log(person3.getDetails_noacces);
@@ -96,7 +96,8 @@
         }
         class B extends A {
             area(a, b) {
-                super.area(a, b);
+            
+               // super.area(a, b);
                 console.log('Class B')
             }
         }

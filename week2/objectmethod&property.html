@@ -27,22 +27,22 @@
             firstname: "abc", lastname: "ss", age: 21,
             get value() { return this.age; }
         };
-        document.write("by using getter:" + person4.valu+ "<br>");
+        document.write("by using getter:" + person4.value + "<br>");
         //setters 
         document.write("getters<br>");
         const person5 = {
             firstname: "abc", lastname: "ss", age: "",
-            set vl(vl) {
-                this.age = vl;
+            set vl(a) {
+                this.age = a;
             }
         };
-        person5.vl = 16;
+        person5.age = 16;
 
         document.write("by using setter:" + person5.age + "<br>");
 
         //for in loop
         for (let x in person) {
-            document.write(x + ": " + person[x] + " ");//keyvalue 
+            document.write(x + ": " + person[x] + "<br> ");//keyvalue 
         }
         document.write("<br>");
         //we can also delete the object propety and method
@@ -116,13 +116,13 @@
         document.write("object.defineproperty<br>");
         document.write("The Object.defineProperty() method defines a new property directly on an object and returns the object. <br>");
         const object5 = {
-            property1:100
+            property1: 100
         };
         Object.defineProperty(object5, 'property1', {
             value: 42,
-            value:34
+            value: 34
         });
-        
+
         document.write(object5.property1);
         console.log(object5);
         document.write("<br>");
@@ -133,7 +133,7 @@
         const object6 = { fname: 'dhruvi', lname: 'patel' };
         document.write(Object.entries(object6));
         console.log(typeof Object.entries(object6));
-        console.log(Object.entries(object6));          
+        console.log(Object.entries(object6));
         document.write("<br>");
 
         document.write("object.freez()<br>");
@@ -231,7 +231,7 @@
         console.log(object18.property2);
         delete object18.property1;
         console.log("after deleting it still pressent", object18.property1);
-        
+
         document.write("Object.setPrototypeof<br>");
         document.write("The Object.setPrototypeOf() method sets the prototype  of a specified object to another object or null<br>")
         const object19 = {
@@ -247,11 +247,11 @@
                 return 'hii';
             }
         }
-        Object.setPrototypeOf(object20, object19); 
+        Object.setPrototypeOf(object20, object19);
         console.log(object20.prop3());
         console.log(object20.prop2());
         console.log(object20.prop1());
-</script>
+    </script>
 </body>
 
 </html>

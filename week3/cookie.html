@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookie</title>
+</head>
+
+<body>
+    <input type="button" value="setcookie" onclick="setcookie()">
+    <input type="button" value="getcookie" onclick="getcookie()">
+    <script>
+        function setcookie() {
+            document.cookie = "username=dhruvi";
+            console.log("cookie has been stored");
+        }
+        function getcookie() {
+            // if (document.cookie.length != 0) {
+            //     var array = document.cookie.split("=");
+            //     alert("Name=" + array[0] + " " + "Value=" + array[1]);
+            // }
+            // else {
+            //     alert("cookie is not stored");
+            // }
+            alert(document.cookie);
+        }
+    </script>
+</body>
+
+</html>

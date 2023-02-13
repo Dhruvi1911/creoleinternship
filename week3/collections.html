@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+    <script>
+        let map = new Map();
+        //to set the key value in the map
+        map.set('one', 1);
+        map.set('two', 2);
+        map.set('three', 'three');
+        console.log(map);
+        //to get the value from the map
+        console.log(map.get("one"));
+        console.log(map.get('two'));
+        console.log(map.get("one"));
+        console.log("map methods");
+        //has(key_name) - returns true or false depending on whether a Map has a key key_name or not
+        console.log(map.has("two"));
+        //delete(key_name) - deletes both the key and the value according to the passed key_name
+        console.log(map.delete("two"));
+        console.log("after deleting key value pair:", map);
+        console.log(map.size);
+        //ietrating through the map using foreach
+        map.forEach(function (key, value) {
+            document.write(key + ": " + value + "<br>");
+        })
+        //iterating map using for of
+        for (let [k, v] of map) {
+            console.log("key: ", k, "value:", v);
+        }
+        console.log("sets");
+        const s = new Set();
+        //to add the value in the set
+        s.add(1);
+        s.add('two');
+        s.add(3);
+        s.add(null);
+        console.log(s);
+        //to delete the value in the set
+        s.delete(1);
+        console.log(s);
+        //to chack whether the value is present in the se tor not
+        console.log(s.has(3));
+        //to delete whole set
+        s.clear();
+        console.log(s);
+        console.log("HTML DOM Collections");
+        let mycollections = document.getElementsByTagName("p");
+        console.log(mycollections[2]);
+
+
+
+    </script>
+</body>
+
+</html>
