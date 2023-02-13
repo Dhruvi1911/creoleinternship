@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+
+<body>
+    <input type="number" id="1" placeholder="enetr 1st number">
+    <input type="number" id="2" placeholder="enetr 2nd number">
+    <button type="submit" onclick="sum()">add</button>
+    <script>
+      function sum(){
+      let a=Number(document.getElementById('1').value);
+      let b=Number(document.getElementById('2').value);
+      console.log(a ,typeof a);
+      console.log(b ,typeof b);
+      if(a==b)
+      {
+         console.log("given two number are same so 3*(a+b):",3*(a+b));
+      }
+      else{
+        console.log("sum of the given two numbers are:",a+b);
+      }
+
+      
+      
+      }
+    </script>
+
+</body>
+
+</html>

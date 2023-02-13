@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+
+<body>
+    <input type="number" id="1" placeholder="enetr 1st number"><br>
+    <input type="number" id="2" placeholder="enetr 2nd number"><br>
+    <input type="number" id="3" placeholder="enetr 3rd number"><br>
+    <input type="number" id="4" placeholder="enetr 4th number"><br>
+    <input type="number" id="5" placeholder="enetr 5th number"><br>
+
+    <button type="submit" onclick="myfun()">submit</button>
+    <script>
+        function myfun() {
+            let a = Number(document.getElementById('1').value);
+            let b = Number(document.getElementById('2').value);
+            let c = Number(document.getElementById('3').value);
+            let d = Number(document.getElementById('4').value);
+            let e = Number(document.getElementById('5').value);
+            const arr=[a,b,c,d,e];
+            let max=arr[0];
+            for(let i=0;i<5;i++){
+                if(max<arr[i]){
+                   max=arr[i];
+                }
+
+            }
+         console.log("maximum number is",max);
+           
+            
+
+        }</script>
+</body>
+
+</html>

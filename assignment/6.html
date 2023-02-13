@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body> 
+    <input type="text" id="1" placeholder="enter string here">
+    <button type="sumbit" onclick="myfun()">submit</button>
+    <script>
+        function myfun() {
+            let str = document.getElementById('1').value;
+            console.log("given string:", str);
+           
+            if (str.startsWith("Java")) {
+                console.log("string is start with Java:",true);
+            }
+            else{
+                console.log(false);
+            }
+            
+        }
+    </script>
+
+
+    
+</body>
+</html>
