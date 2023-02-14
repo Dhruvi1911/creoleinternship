@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+
+<body>
+    <p>enter string here</p>
+    <input type="text" id="1"><br>
+    enter an index number:<br>
+    <input type="number" id="2"><br>
+    <button type="submit" onclick="myfun()">submit</button>
+    <script>
+        function myfun() {
+            let str = document.getElementById('1').value;
+            let number = Number(document.getElementById('2').value);
+            console.log(str);
+            console.log(number);
+           let array = str.split('');
+            let c = str.charAt(number);
+           
+            if(c =='a'|| c=='e' || c=='i' ||c== 'o' ||c== 'u')
+            {
+                console.log("vowel");
+            }
+            else{
+                console.log("consonamt");
+            }
+            }
+</script>
+
+</body>
+
+</html>

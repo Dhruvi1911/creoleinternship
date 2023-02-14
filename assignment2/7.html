@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+
+<body>
+    enter string here:
+    <input type="text" id="1">
+    <button type="submit" onclick="myfun()">submit</button>
+    <script>
+        function myfun() {
+            let str = document.getElementById('1').value;
+            let arr = str.split('');
+            let arr1 = arr.sort();
+            let str1=arr1.join('');
+            if(str1==str){
+                console.log("string in alphabetically order");
+            }
+            else{
+                 let arr2=arr.reverse();
+                 let str2=arr2.join('');
+                 if(str2==str){
+
+                console.log("string is in reverse alphabetically order");}
+                else{
+                    console.log("string is not in alphabetically nor reverse alphabetically");
+                }
+            }
+             
+         
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

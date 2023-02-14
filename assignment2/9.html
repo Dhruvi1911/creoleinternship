@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+
+<body>
+    enter string here:
+    <input type="text" id="1"><br>
+    enter a string that u want to search in the given string:
+    <input type="text" id="2"><br>
+    <button type="submit" onclick="myfun()">submit</button>
+    <script>
+        function myfun() {
+            let str = document.getElementById('1').value;
+            let word = document.getElementById('2').value;
+           console.log( str.includes(word));
+        }
+        
+    </script>
+</body>
+
+</html>
