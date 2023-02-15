@@ -7,12 +7,42 @@
     <title>4</title>
 </head>
 <body>
-    <input type="text" id="1">
-    <button type="submit" onclick="myfun()">submit</button>
+    
     <script>
-         function myfun() {
-                let str = document.getElementById('1').value;
-            }
+         function myfun(){
+  let str = "heggbdeff";
+  let tempStr = str.split("");
+  let duplicate = [];
+  function common(char, index) {
+    if (tempStr.indexOf(char) == index) {
+      return char;
+    }
+    else{
+        duplicate.push(char)
+    }
+  }
+  let array = tempStr.filter(common);
+ 
+  let max = 0,maxchar="";
+  for(let char of str){
+      if(duplicate[char]){
+          duplicate[char]++;
+      }else{
+          duplicate[char] = 1;
+      }
+  }
+  for(let char in duplicate){
+      if(duplicate[char] > max){
+          max = duplicate[char];
+          maxchar = char;
+      } 
+
+  }
+  console.log(duplicate);
+  console.log(maxchar,"occur for",max,"times");
+}
+myfun();
+
     </script>
 </body>
 </html>

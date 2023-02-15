@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10</title>
 </head>
+
 <body>
     <script>
-        let str="hello";
-       let b= String.random(str);
-       console.log(b);
+         let str="hello";
+        let result='';
+        for(i=0;i<str.length;i++){
+        result=result+str.charAt(Math.random()*str.length);}
+        console.log(result);
+
+        
+        // let arr=str.split('');
+        // arr.sort(function()
+        // {
+        //     return 0.5-Math.random();
+        // })
+        // console.log(arr.join(''));
+        
+ 
+   
+
     </script>
 </body>
+
 </html>

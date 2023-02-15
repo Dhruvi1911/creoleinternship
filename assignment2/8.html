@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8</title>
+    <title>Document</title>
 </head>
-
 <body>
-
-
     <script>
-        let str = "i am a string";
-        let c = str.charAt(0).toUpperCase();
-        let d = str.charAt(2).toUpperCase();
-        let e = str.charAt(5).toUpperCase();
-        let f = str.charAt(7).toUpperCase();
-        console.log(c, d+"m", e, f+"tring");
+        let str="i am a string";
+        let arr=str.split(' ');
+        console.log(arr);
+        for(let i=0;i<arr.length;i++)
+        {
+            arr[i]=arr[i][0].toUpperCase()+arr[i].substr(1);
+        }
+        console.log(arr.join(""));
     </script>
-    
 </body>
-
 </html>

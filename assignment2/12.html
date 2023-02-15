@@ -6,18 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12</title>
 </head>
-<body>enter quote here:
-    <input type="text" id="1"><br>
-    enter author name here:
-    <input type="text" id="2">
-    <button type="submit" onclick="myfun()">submit</button>
+<body>
     <script>
         function myfun(){
-        let q=document.getElementById('1').value;
-        let a=document.getElementById('2').value;
-        console.log("[\""+q+"\",\""+a+"\"]");
-        }
-
+        const quote = `The unexamined life is not worth living. - Socrates`;
+        let arr= quote.split("-");
+        console.log(arr);
+     }
+myfun();
     </script>
 </body>
 </html>

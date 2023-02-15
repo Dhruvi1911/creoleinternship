@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3</title>
 </head>
+
 <body>
-    <p>enter string here</p>
-    <input type="text" id="1">
-    <button type="submit" onclick="myfun()">submit</button>
-        <script>
-            function myfun() {
-                let str = document.getElementById('1').value;
-                console.log(str);
-                 let arr =str.split(' ');
-                 Array.match('a');
-                 for(let i=0;i<arr.length;i++)
-                   {
-                    if(arr[i]==)
-                   }               
-            }
-        </script>
-        <!-- 3. Find the most common character within the string. Given any string, find the most commonly occurring character. If there are 2 or more most commonly occurring characters; return the character which comes first alphabetically.
-        For instance: xybbbefaaag 
-        Would return a, as a and b both occur 3 times each, respectively, but a comes before b alphabetically.
-        input -> function("abcddefg")
-        output -> d
-        input -> function("heggbdeff")
-        output -> f
-     -->
+    <script>
+  function myfun(){
+  let str = "abbbaacdcd";
+  let tempStr = str.split("");
+  let duplicate = [];
+  function common(char, index) {
+    if (tempStr.indexOf(char) == index) {
+      return char;
+    }
+    else{
+        duplicate.push(char)
+    }
+  }
+  
+ let array = tempStr.filter(common);
+ console.log(duplicate);
+
+ 
+  let max = 0,maxchar="";
+  for(let char of str){
+      if(duplicate[char]){
+          duplicate[char]++;
+      }else{
+          duplicate[char] = 1;
+      }
+    //   console.log(duplicate);
+  }
+ 
+  for(let char in duplicate){
+      if(duplicate[char] > max){
+          max = duplicate[char];
+          maxchar = char;
+      } 
+
+  }
+  console.log(maxchar,"has higher frequency");
+}
+myfun();
+
+        
+    </script>
 </body>
+
 </html>

@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
+    <title>Document</title>
 </head>
 <body>
-    <p>en</p>
-    <input type="text" id="1">
-    <button type="submit" onclick="myfun()">submit</button>
     <script>
-        let text="I am an example string";
-       let a= text.match(/a/g);
-       let b=text.match(/x/g);
-       console.log(a);
-       console.log(b);
-    </script>
+        function myfun()
+        {
+            let str="I am an example string";
+            let char1='a';
+            let char2='e';
+            let arr1=str.split('');
+            
+            
+            let arr2=[];
+            for(let i=0;i<arr1.length;i++)
+            {
+                if(arr1[i]=='a'||arr1[i]=='e')
+                {
+                   arr2.push(""); 
+                   
+                }
+                else
+                {
+                    arr2.push(arr1[i]);
+                }
+            }
+            console.log(arr2.join(""));
+
+           
+        }
+        myfun();
+        </script>
 </body>
 </html>

@@ -16,18 +16,22 @@
         function myfun() {
             let str = document.getElementById('1').value;
             let arr = str.split('');
-            let j=0;
-           
-            for (let j = 0; j < arr.length; j=j+2) {
-               
-                for( j of arr)
-                {
-                    j=j.toUpperCase();
+            
+            let arr1 = [];
+        
+            for (let j = 0; j < arr.length; j++) {
+                if (j % 2 == 0) {
+                    arr[j]=arr[j].toUpperCase();
+                    arr1.push(arr[j]);
                 }
-                console.log(j);
+                else {
+                    arr1.push(arr[j]);
                 }
-                console.log(arr);
+            }
+            console.log(arr1.join(""));
         }
+   
+
 
 
     </script>
