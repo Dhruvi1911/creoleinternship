@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  height: 500px;
+  width: 800px;
+  border: 1px solid #4c81af;
+  border-radius: 15px;
+  background-color: aliceblue;
+}
+.container .part1 {
+  flex: 40%;
+  margin-top: 15rem;
+  padding-left: 5rem;
+}
+.container .part1 button {
+  text-align: center;
+  width: 50%;
+  background-color: #4c81af;
+  color: white;
+  font-size: 14px;
+  padding: 1rem 2.5rem;
+  margin: 1rem 1rem;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.container .part2 {
+  flex: 60%;
+  background-color: white;
+}
+.container .part2 .p {
+  margin-top: 5rem;
+  padding-left: 5rem;
+}
+.container .part2 .p h1 {
+  color: rgb(55, 55, 250);
+  margin-top: 6rem;
+  margin-left: 4rem;
+  font-weight: 200;
+}
+.container .part2 .p p {
+  margin-top: 1rem;
+  margin-left: 9rem;
+}
+.container .part2 .p form .name i {
+  position: absolute;
+  margin-top: 1.2rem;
+  margin-left: 0.2rem;
+}
+.container .part2 .p form .email i {
+  position: absolute;
+  margin-top: 1.2rem;
+  margin-left: 0.2rem;
+}
+.container .part2 .p form .email .password i {
+  position: relative;
+  margin-top: 5.2rem;
+  margin-left: 0.2rem;
+}
+.container .part2 .p form input[type=text],
+.container .part2 .p form input[type=password] {
+  width: 80%;
+  padding: 1.2rem;
+  margin: 9px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.container .part2 .p form button {
+  top: 38px;
+  text-align: center;
+  width: 40%;
+  background-color: #4c81af;
+  color: white;
+  font-size: 14px;
+  padding: 1rem 2rem;
+  margin: 1rem 4rem;
+  border: none;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 876px) {
+  .container {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+.class1 {
+  color: black;
+  padding-top: 100px;
+  text-align: center;
+  height: 200px;
+  text-decoration: underline;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid hsl(336, 100%, 50%);
+  background-color: rgb(65, 241, 244);
+}
+
+.class2 {
+  border: rgb(231, 80, 106) solid 3px;
+  color: dodgerblue;
+}
+
+.class3 {
+  border: rgb(61, 234, 31) solid 3px;
+  color: dodgerblue;
+}/*# sourceMappingURL=mystyle2.css.map */

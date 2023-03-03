@@ -1,0 +1,31 @@
+@mixin important_text {
+    color: black;
+    padding-top: 100px;
+    text-align: center;
+    height: 200px;
+    text-decoration: underline;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid hsl(336, 100%, 50%);
+}
+.class1{
+    @include important_text;
+    background-color:rgb(65, 241, 244);
+}
+@mixin imp_text1($color,$width){
+    border:$color solid $width;
+}
+@mixin imp_text2($color:black,$width){
+    border:$color solid $width;}
+.class2{
+    //passing variable in the mixin
+    @include imp_text1(rgb(231, 80, 106), 3px);
+    color:dodgerblue;
+
+}
+.class3{
+    //passing variable in the mixin
+    @include imp_text2(rgb(61, 234, 31), 3px);
+    color:dodgerblue;
+
+}

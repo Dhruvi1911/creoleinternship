@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav bar</title>
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    <!-- <script>
+        function click()
+        {
+           document.getElementsByClassName('dropdown').style.display=block; 
+        } 
+    </script> -->
+
+
+    <nav class="navbar">
+        <div class="logo">LOGO</div>
+        <ul class="nav-link">
+            <input type="checkbox" id="checkbox_toggle" checked>
+        </label>
+        <label for ="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="services">
+                    <!-- <a href="#" onclick="click()">Services</a> -->
+                    <a href="#" >services</a>
+                
+                  <!--Dropdown menu-->
+                  <ul class="dropdown" >
+                    <li><a href="#">Dropdown1</a></li>
+                    <li><a href="#">Dropdown2</a></li>
+                    <li><a href="#">Dropdown3</a></li>
+                   </ul>
+                </li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </div>
+        </ul>
+
+    </nav>
+    
+</body>
+</html>
