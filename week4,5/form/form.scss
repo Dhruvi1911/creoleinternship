@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+h1 {
+  padding-top: 6rem;
+ 
+  font-weight: 600;
+  color: rgba(6, 78, 173, 0.947);
+  margin: 0;
+}
+p {
+  font-size: 15px;
+  font-weight: 100;
+  margin: 20px 10px 30px;
+}
+span {
+  font-size: 15px;
+  color: gray;
+}
+a {
+  color: rgb(4, 107, 252);
+  font-size: 13px;
+  text-decoration: none;
+}
+.container {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  width: 960px;
+  max-width: 100%;
+  min-height: 560px;
+  .form-container {
+    position: absolute;
+   
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+    form {
+      background: White;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex: 100%;
+      .icons {
+        margin: 20px 0;
+        i {
+          font-size: 30px;
+          display: inline-block;
+          justify-content: center;
+          align-items: center;
+          margin: 2px 5px;
+          height: 40px;
+          width: 40px;
+        }
+      }
+      input {
+        background: #eee;
+        border: none;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 80%;
+      }
+      button {
+        border-radius: 20px;
+        border: 1px solid rgb(34, 34, 196);
+        background: rgb(34, 34, 196);
+        color: white;
+        font-size: 20px;
+        padding: 12px 45px;
+        text-transform: uppercase;
+        margin-top: 7px;
+        transition: transform 80ms ease-in;
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+.container{
+  .sign-in-container{
+    
+    left: 0;
+    width:50%;
+    z-index:2;
+
+  }
+  .sign-up-container{
+    
+    left: 0;
+    width:50%;
+    opacity: 0;
+    z-index:1;
+
+  }
+}
+.container2 {
+    position:absolute;
+    top:0;
+    left:50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 80ms ease-in-out;
+    z-index:100;
+ 
+  button {
+    border-radius: 20px;
+    border: 1px solid rgb(34, 34, 196);
+    background: transperant;
+    color: blue;
+    font-size: 20px;
+    padding: 12px 45px;
+    text-transform: uppercase;
+    margin-top: 7px;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  .content{
+    position:relative;
+    background: rgb(73, 202, 253);
+    color:white;
+    font-size: 15px;
+    font-weight: 200;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+    height:100%;
+    width:200%;
+    left:-100%;
+
+    .content-div{
+      position:absolute;
+      top:0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 40px;
+      height: 100%;
+      width:50%;
+      text-align: center;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+     
+    }
+    .content-right{
+      right:0;
+      transform: translateX(0);
+    }
+    .content-left{
+      transform: translateX(-20%);
+    }
+
+  }
+}
+//animation
+//move signin to the right
+.container.right-content-active .sign-in-container{
+transform: translateX(100%);
+}
+//move content to the left
+.container.right-content-active .container2{
+  transform: translateX(-100%);
+
+}
+//bring signup over signin
+.container.right-content-active .sign-up-container{
+  transform: translateX(100%);
+  opacity: 1;
+  z-index:5;
+}
+//move content back to right
+.container.right-content-active .content{
+  transform: translateX(50%);
+}
+.container.right-content-active .content-left{
+  transform: translateX(0);
+}
+.container.right-content-active .content-right{
+  transform: translateX(20%);
+}
