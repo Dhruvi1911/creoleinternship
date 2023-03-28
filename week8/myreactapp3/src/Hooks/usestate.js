@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from 'react';
 export function Example() {
   const [count, setCount] = useState(0);
   const [fruit, setFruit] = useState("mango");
@@ -7,10 +7,7 @@ export function Example() {
   const handleage = () => {
      setAge((obj)=>{ return {...obj,age:10}});
   }
-  const useEffect=()=>{
-    document.title='you clciked',{count},'times' ;
-
-  }
+ 
   return (
     <>
        
