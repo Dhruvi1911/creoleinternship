@@ -8,7 +8,7 @@
            {/* if else using ternary operator */}
            <h3 style={{color:isgreen?"green":"red"}}>this has color</h3>
            {/* if statement */}
-           {isgreen&& <button>this is button</button>}
+           {isgreen && <button>this is button</button>}
           </div>
         )
         

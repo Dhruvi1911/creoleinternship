@@ -16,11 +16,23 @@
     <button type="submit" onclick="myfun()">submit</button>
     <script>
         function myfun() {
-            let str = document.getElementById('1').value;
-            let word = document.getElementById('2').value;
-           console.log( str.includes(word));
+            let s1 = document.getElementById('1').value;
+            let s2 = document.getElementById('2').value;
+            let res = 0;
+
+            for (let i = 0; i < s1.length; i++) {
+                let temp_str = s1.substr(i, s2.length);
+                if (temp_str == s2) {
+                    res = 1;
+                    console.log("string presenta at index", i);
+                    break;
+                }
+            }
+            if (res == 0) {
+                console.log("given word is not present");
+            }
         }
-        
+
     </script>
 </body>
 

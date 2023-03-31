@@ -16,21 +16,57 @@
         function myfun() {
             let str = document.getElementById('1').value;
             let arr = str.split('');
-            
+            console.log(arr);
+            let space = [];
+            for (let k = 0; k < arr.length; k++) {
+                if (arr[k] == " ") {
+                    space.push(k);
+                }
+
+            }
+            console.log(space);
+
             let arr1 = [];
-        
-            for (let j = 0; j < arr.length; j++) {
-                if (j % 2 == 0) {
-                    arr[j]=arr[j].toUpperCase();
-                    arr1.push(arr[j]);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == " ") {
+                    arr1.push();
                 }
                 else {
-                    arr1.push(arr[j]);
+                    arr1.push(arr[i]);
                 }
             }
-            console.log(arr1.join(""));
+            console.log(arr1);
+            let arr2 = [];
+
+            for (let j = 0; j < arr1.length; j++) {
+                if (j % 2 == 0) {
+                    arr1[j] = arr1[j].toUpperCase();
+                    arr2.push(arr1[j]);
+                }
+                else {
+                    arr2.push(arr1[j]);
+                }
+            }
+            console.log(arr2);
+            let arr3 = [];
+
+            for (let l = 0; l < arr.length; l++) {
+                // for(let m=0;m<space.length;m++)
+              if (arr[l] == " ")
+                {
+                    arr3.push(" ");
+                }
+                else {
+                 for ( n = 0; n < arr2.length;n++) 
+                 {
+                        arr3.push(arr2[n]);
+                        break;
+                  }
+                 }
+            console.log(arr3);
         }
-   
+    }
+
 
 
 

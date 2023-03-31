@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p</title>
+</head>
+
+<body>
+    <script>
+        function myfun() {
+            let str = "aabbbacdcccddd";
+            let arr = str.split("").sort();
+            console.log(arr);
+            var obj = {}
+            countWord();
+
+            function countWord() {
+                for (let i = 0; i < arr.length; i++) {
+                    if (obj[arr[i]]) //check if character is present in the obj as key
+                    {
+                        obj[arr[i]] = obj[arr[i]] + 1; //if yes then update its value
+                    }
+                    else {
+                        obj[arr[i]] = 1; //initialise it with a value 1
+                    }
+                }
+            }
+            console.log(obj);
+            let arr1 = Object.keys(obj);
+            console.log(arr1);
+            let arr2 = Object.values(obj);
+            console.log(arr2);
+
+            for (let j = 0; j < arr2.length; j++) {
+                if (Math.max.apply(null, arr2) == arr2[j]) {
+                    var max=arr2[j];
+                    console.log(max);
+                    break;
+                }
+                
+            for(let x in obj)
+            {
+                if(obj[x]==max)
+                {
+                    console.log("maximum ocuuring character is",x);
+                    break;
+                }
+            }
+        }}
+
+        myfun();
+    </script>
+</body>
+
+</html>

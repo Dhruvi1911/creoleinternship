@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most common character</title>
+</head>
+<body>
+    <h1>Most common character</h1>
+    <label for="">Enter the string:</label>
+    <input type="text" name="" id="string">
+    <button onclick="find()">Find</button>
+    <p id="ans"></p>
+    <script>
+        function find(){
+            let str = document.getElementById('string').value;
+            let stra = str.split('').sort();
+            let count = [];
+            let flag = 1;
+            for(let i=0 ; i<stra.length ; i++){
+                flag = 1;
+                for(let j=0 ; j<stra.length ; j++){
+                    if(stra[i] == stra[j] && i!=j){
+                        flag++;
+                    }
+                }
+                count.push(flag);
+                console.log(flag);
+            }
+            console.log(count);
+            let a = document.getElementById('ans');
+            a.innerHTML = 'The most common character is '+stra[count.indexOf(Math.max.apply(null,count))];
+        } 
+    </script>
+</body>
+</html>

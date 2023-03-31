@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>await</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
+      // async function myfun() {
+      //     var y = await "hello";
+      // }
 
+      // myfun().then(
+      //     function () {
+      //         console.log("resolved");
+      //     }
+      // );
 
-        // async function myfun() {
-        //     var y = await "hello";
-        // }
+      // console.log("before promises");
+      // myfun();
+      // console.log("after promises");
+      // console.log(1);
+      // console.log(2);
+      ////Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
 
-        // myfun().then(
-        //     function () {
-        //         console.log("resolved");
-        //     }
-        // );
+      async function method() {
+        let second_promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("dhruvi");
+          }, 0500);
+        });
+        let promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("hello");
+          }, 1000);
+        });
 
-        // console.log("before promises");
-        // myfun();
-        // console.log("after promises");
-        // console.log(1);
-        // console.log(2);
-        ////Await function is used to wait for the promise. It could be used within the async block only. It makes the code wait until the promise returns a result. It only makes the async block wait.
-
-        function method() {
-
-            let second_promise = new Promise((resolve, reject) => {
-                setTimeout(() => {
-                    resolve("hello");
-                }, 2000);
-            });
-            second_promise.
-                then(function (value) {
-                    console.log(2);
-                    console.log(value);
-                     console.log(3);
-                })
-
-        }
-        async function display() {
-            let data = await method();
-            let promise = new Promise((resolve, reject) => {
-                resolve("dhruvi");
-            });
-            promise.
-                then(function (value) {
-                console.log(value);
-                });     
-            }
-        console.log(1);
-        display();
-        console.log(4);
-        console.log(5);
-
-
+        //until the promise is fulfuilled either resolved or rejected it wait for the result and then going into the next step
+        let p1 = await promise.then(function (value) {
+          console.log(value);
+        });
+        console.log(2);
+        console.log(3);
+        let p2 = second_promise.then(function (value) {
+          console.log(value);
+        });
+      }
+      async function cherry() {
+        let third_promise = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve("dev");
+          }, 2000);
+        });
+        let p3 = await third_promise.then(function (value) {
+          console.log(value);
+        });
+      }
+      //two async function work simultaneously
+      method();
+      cherry();
     </script>
-</body>
-
+  </body>
 </html>

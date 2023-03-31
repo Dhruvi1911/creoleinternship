@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4</title>
 </head>
-<body>
-    
-    <script>
-         function myfun(){
-  let str = "heggbdeff";
-  let tempStr = str.split("");
-  let duplicate = [];
-  function common(char, index) {
-    if (tempStr.indexOf(char) == index) {
-      return char;
-    }
-    else{
-        duplicate.push(char)
-    }
-  }
-  let array = tempStr.filter(common);
- 
-  let max = 0,maxchar="";
-  for(let char of str){
-      if(duplicate[char]){
-          duplicate[char]++;
-      }else{
-          duplicate[char] = 1;
-      }
-  }
-  for(let char in duplicate){
-      if(duplicate[char] > max){
-          max = duplicate[char];
-          maxchar = char;
-      } 
 
-  }
-  console.log(duplicate);
-  console.log(maxchar,"occur for",max,"times");
-}
-myfun();
+<body>
+    <script>
+
+        function myfun() {
+            let str = "heggbdeff";
+            let tempStr = str.split("");
+            let duplicate = [];
+            function common(char, index) {
+                if (tempStr.indexOf(char) == index) {
+                    return char;
+                }
+                else {
+                    duplicate.push(char)
+                }
+            }
+            let array = tempStr.filter(common);
+
+            let max = 0, maxchar = "";
+            for (let char of str) {
+                if (duplicate[char]) {
+                    duplicate[char]++;
+                } else {
+                    duplicate[char] = 1;
+                }
+            }
+            for (let char in duplicate) {
+                if (duplicate[char] > max) {
+                    max = duplicate[char];
+                    maxchar = char;
+                }
+
+            }
+          
+            console.log(maxchar, "occur for", max, "times");
+        }
+        myfun();
 
     </script>
 </body>
+
 </html>

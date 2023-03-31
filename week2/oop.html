@@ -10,8 +10,7 @@
 
 <body>
     <script>
-
-        class human {
+    class human {
             constructor(name, age) {
                 this.name = name;
                 this.age = age;
@@ -69,42 +68,31 @@
         let person2 = new person1('rohit', 21);
         person2.add_Address('Delhi');
         person2.getDetails();
-        // data Abstraction which means representing essential features hiding the background detail.
-        function person4(fname, lname) {
-            let firstname = fname;
-            let lastname = lname;
-
-            getDetails_noacces = function () {
-                return "firstname is: " + firstname + " lastname is: " + lastname;
-            }
-
-            this.getDetails_access = function () {
-                return "firstname is: " + firstname + " lastname is: " + lastname;
-            }
-        }
-
-        let person3 = new person4('raj', 'shah');
-        console.log(person3.firstname);
-        console.log(person3.getDetails_noacces);
-        console.log(person3.getDetails_access());
+      
 
         //Polymorphism means the same function with different parameter is called many times.
         class A {
             area(x, y) {
                 console.log(x * y);
+                console.log("class A");
             }
         }
         class B extends A {
-            area(a, b) {
-            
-               // super.area(a, b);
-                console.log('Class B')
+            area(a, b, c) {
+
+                console.log(a + b + c);
+                console.log("class B")
+
             }
         }
         let ob = new B();
-        let output = ob.area(100, 200);
+        ob.area(1, 4, 6);
+       
+        let ob1 = new A();
+        ob1.area(2, 3);
 
 
+        //object
         const person7 = {
             firstName: "dev",
             lastName: "patel",
@@ -113,10 +101,92 @@
             }
         };
         document.write(person7.name());
+          // data Abstraction which means representing essential features hiding the background detail.
+          function person4(fname, lname) {
+            this.firstname = fname;
+            let lastname = lname;
+            var getDetails_noacces = function () {
+                return "firstname is: " + firstname + " lastname is: " + lastname;
+            }
 
-    </script>
+            this.getDetails_access = function () {
+                return "firstname is: " + this.firstname + " lastname is: " + this.lastname;
+            }
+        }
 
+        let person3 = new person4('dev', 'patel');
+        console.log(person3.firstname);
+        console.log(person3.getDetails_noacces);
+        console.log(person3.getDetails_access());
+        //abstraction is to hide the implementational details and showcase essential features of the object to its users.
+     
+        console.log("abastrction using constructor function");
+        function Employee() {
+            this.empname = "empname";
+            if (this.constructor == Employee) {
+                throw new Error("you can not create the instance of the abstract class")
+            }
+            // this.display=function(){
+            //     return "Employee name is:", this.empname;
+            // }
+        };
+        Employee.prototype.display = function () {
+            return "Employee name is: " + this.empname;
+        }
+        //var employee=new Employee();//error ocuur bcz we cannot create instance of the abstract class
+        //so we crate a subclass(constructor function)
+        function Manager(fullname) {
+            this.empname = fullname;
+        }
+        Manager.prototype = Object.create(Employee.prototype);
+        var mang = new Manager("abc patel");
+        console.log(mang.display());
 
+        console.log("abstraction achieved in  js using classes");
+        class Employeee {
+            constructor(empname) {
+                this.empname = empname;
+            }
+        display() {
+                return "full name is", this.empname;
+            }
+        }
+        class Managerr extends Employeee {
+           constructor(ename) {
+                super(ename);
+                 }
+         }
+        let m = new Managerr("dev patel");
+        console.log(m.display());
+
+        console.log("abstrction in js using class");
+        class em{
+            constructor()
+            {
+                if(this.constructor==em)
+                {
+                    throw Error("instance of abstract class can not be created");
+                }
+            }
+            print()
+            {
+                throw Error("abstract class has no implementation");
+            }
+        }
+       // var e=new em();
+       //error:- instance of abstarct class can not be created
+       class mm extends em{
+        print()
+        {
+            //super.print();
+            //error:-abstract class has no implementation
+            return "i am a manager";
+        }
+
+       }
+       var a=new mm();
+       console.log(a.print());
+       
+ </script>
 </body>
-
 </html>

@@ -35,12 +35,12 @@
         const person2 = new Object();
         person2.firstname = "dhruvi";
         person2.lastname = "patel";
-        person2.age =21;
+        person2.age = 21;
         document.write("firstname: " + person2.firstname + " lastname: " + person2.lastname + " age: " + person2.age + "<br>");
         //JSON.stringify
         document.write("JSON.stringify<br>");
         let myString = JSON.stringify(person2);
-        document.write(myString+"<br>")
+        document.write(myString + "<br>")
         document.write("<b>Define an object constructor, and then create objects of the constructed type.</b><br>");
         function emp(name, id, salary) {
             this.name = name;
@@ -48,16 +48,16 @@
             this.salary = salary;
         }
         const e = new emp("raj", 01, 100000);
-        document.write(e.name + " " + e.id + " " + e.salary+"<br>");
+        document.write(e.name + " " + e.id + " " + e.salary + "<br>");
         document.write("<b>Create an object using Object.create()</b><br>");
         const people = {
-           info : function () {
-                return ("My name is "+this.name+" Am I human?" +this.isHuman);
+            info: function () {
+                return ("My name is " + this.name + " Am I human?" + this.isHuman);
             }
         };
         const me = Object.create(people);
         me.name = "abc"; // "name" is a property set on "me", but not on "person"  
-        me.isHuman = true; 
+        me.isHuman = true;
         console.log(me.info());
 
         // function people1(fname,lname,age) {

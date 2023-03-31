@@ -1,103 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>loop</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <script>
-         document.write("javascript loops<br>");
-        document.write("javascript for loop<br>");
-        //for - loops through a block of code a number of times
-        for (let i = 1; i <= 5; i++) {
-            document.write(i + "<br>");
-        }
-        document.write("javascript while loop<br>");
-        let i = 1;
-        //while - loops through a block of code while a specified condition is true
-        while (i <= 5) {
-            document.write(i + "<br>");
-            i++;
-        }
-        document.write("javascript do while loop<br>");
-        let j = 1;
-        //do/while - also loops through a block of code while a specified condition is true
-        do {
-            document.write(j + "<br>");
-            j++;
+      document.write("javascript loops<br>");
+      document.write("javascript for loop<br>");
+      //for - loops through a block of code a number of times
+      for (let i = 1; i <= 5; i++) {
+        document.write(i + "<br>");
+      }
+      document.write("javascript while loop<br>");
+      let i = 1;
+      //while - loops through a block of code while a specified condition is true
+      while (i <= 5) {
+        document.write(i + "<br>");
+        i++;
+      }
+      document.write("javascript do while loop<br>");
+      let j = 1;
+      //do/while - also loops through a block of code while a specified condition is true
+      do {
+        document.write(j + "<br>");
+        j++;
+      } while (j <= 5);
+      document.write("for in loop<br>");
+      const obj1 = {
+        1: "a",
+        2: "b",
+        3: "c",
+      };
 
-        } while (j <= 5)
-        document.write("for in loop<br>");
-        const obj1 = {
-            1: 'a',
-            2: 'b',
-            3: 'c'
-        }
+      //for in statement loops through the properties of an Object
+      for (let x in obj1) {
+        document.write(x + ": " + obj1[x] + " ");
+      }
+      document.write("<br>");
+      document.write("for of loop<br>");
+      //for/of - loops through the values of an iterable object
+      const arr = [1, 2, 3, 4];
+      for (let x of arr) {
+        document.write(x + " ");
+      }
+      document.write("<br>");
+      const a = "HEllO WORLD";
+      for (let x of a) {
+        document.write(x + " <br>");
+      }
+      //The forEach() method calls a function for each element in an array.
 
-        //for in statement loops through the properties of an Object
-        for (let x in obj1) {
-            document.write(x + ": " + obj1[x] + " ");
-        }
-        document.write("<br>");
-        document.write("for of loop<br>");
-        //for/of - loops through the values of an iterable object
-        const arr = [1, 2, 3, 4];
-        for (let x of arr) {
-            document.write(x + " ");
-        }
-        document.write("<br>");
-        const a = "HEllO WORLD";
-        for (let x of a) {
-            document.write(x + " <br>");
-        }
-       //The forEach() method calls a function for each element in an array.
-       
-        const ab=[1,2,3,4,5];
-        
-        ab.forEach(myfunction);
-        function myfunction(value,index){
-            console.log("index is:"+index+"value is:"+value);
-        
-        }
-        const x=[1,2,3,4,5];
-        let sum=0;
-       
-        let myfun=(value)=>
-        {
-            sum=sum+value;
-        }
-        x.forEach(myfun);
-        console.log("sum of the elements of the array is:",sum);
-        // function Car(model) {
-        //     this.model = model;
-        //     gear = 1;
+      const ab = [1, 2, 3, 4, 5];
 
-        //     var doSomeMagicWithGearStick = function () {
-        //         console.log('I am doing something very complicated thing for the gear ' + this.gear);
-        //     }
+      ab.forEach(myfunction);
+      function myfunction(value, index) {
+        console.log("index is:" + index + "value is:" + value);
+      }
+      const x = [1, 2, 3, 4, 5];
+      let sum = 0;
 
-        //     this.changeGear = function (changeTo) {
-        //         if (changeTo > 5) {
-        //             throw new Error('Gear cannot be more than 5.');
-        //         }
-        //         gear = changeTo;
-        //         doSomeMagicWithGearStick();
-        //     }
-        // }
+      let myfun = (value) => {
+        sum = sum + value;
+      };
+      x.forEach(myfun);
+      console.log("sum of the elements of the array is:", sum);
+      // function Car(model) {
+      //     this.model = model;
+      //     gear = 1;
 
-        // var car = new Car('Toyota Corolla');
-        // console.log(car.doSomeMagicWithGearStick);
-        // console.log(car.changeGear(3));
+      //     var doSomeMagicWithGearStick = function () {
+      //         console.log('I am doing something very complicated thing for the gear ' + this.gear);
+      //     }
 
+      //     this.changeGear = function (changeTo) {
+      //         if (changeTo > 5) {
+      //             throw new Error('Gear cannot be more than 5.');
+      //         }
+      //         gear = changeTo;
+      //         doSomeMagicWithGearStick();
+      //     }
+      // }
 
-
-
-
+      // var car = new Car('Toyota Corolla');
+      // console.log(car.doSomeMagicWithGearStick);
+      // console.log(car.changeGear(3));
     </script>
-</body>
-
+  </body>
 </html>

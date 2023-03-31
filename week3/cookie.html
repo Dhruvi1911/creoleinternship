@@ -7,14 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cookie</title>
 </head>
-
+<!-- in firefox browser it will work -->
 <body>
     <input type="button" value="setcookie" onclick="setcookie()">
     <input type="button" value="getcookie" onclick="getcookie()">
     <script>
         function setcookie() {
-            document.cookie = "username=dhruvi";
+            var expirydate = new Date();
+            expirydate.setTime(expirydate.getTime() + (100 * 60 * 60 * 24 * 100))
+            // document.cookie = "username=dhruvi";
+
             console.log("cookie has been stored");
+            document.cookie = "name=asd;expires="+expirydate.toGMTString()
         }
         function getcookie() {
             // if (document.cookie.length != 0) {
@@ -24,7 +28,8 @@
             // else {
             //     alert("cookie is not stored");
             // }
-            alert(document.cookie);
+            let arr=document.cookie;
+            console.log(arr);
         }
     </script>
 </body>

@@ -12,8 +12,14 @@
         // fun1();
         // console.log(a);
         console.log("hello");
-        import message from "./main.js";
-        message();
+        import {message} from "./main.js";
+        let c=message();
+        console.log(c);
     </script>
   </body>  
 </html>
+<!-- for import the module we have to run the file in the local server 
+to start the local sever :=
+1.open cmd from the file u want to run
+2.run the command python -m http.server
+3.then in browser http://localhost:8000/filenmae.html -->

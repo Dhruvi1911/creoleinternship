@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class human{
+            constructor(ename)
+            {
+                if(this.constructor==human)
+                {
+                    throw Error("instace not created");
+                }
+                this.ename=ename;
+            }
+            display()
+            {
+                throw Error("abstract class method have no implementation");
+            }
+        }
+        class h extends human{
+            constructor(ename)
+            {
+                super(ename);
+            }
+            display()
+            {
+                return this.ename;
+            }
+        }
+        let m=new h("dhruvi");
+       let p= m.display();
+       console.log(p);
+    </script>
+</body>
+</html>
